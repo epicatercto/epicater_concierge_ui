@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+	<title>Epicater</title>
+
+	<!-- Custom fonts for this template-->
+	<link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<link href="css/bootstrap.min.css" rel="stylesheet"> 
+	<link href="css/epicater.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="dialog change_plan">
+		<div class="gsc-container animated fadeIn">
+			<div class="gsc-images">
+				<img src="img/6.svg" repeat="no-repeat" type="image" class="gsc-image" style="right: -140px !important;top: -20px !important;transform: rotate(0deg) !important;position: absolute !important;object-fit: fill !important;object-position: 50% 50% !important;width: 408px !important;height: auto !important;">
+			</div>
+			<div class="gsc-body">
+				<div class="gsc-content gsc-no-label">
+					<div class="gsc-title">Which package do you want?</div>
+					<div class="gsc-description">
+						<div class="form-group">  
+							<label class="pure-material-radio">
+								<input type="radio" name="group" checked>
+								<span>2 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 49</div></span> 
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="pure-material-radio">
+								<input type="radio" name="group">
+								<span>4 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 99</div></span> 
+							</label>
+						</div> 
+						<div class="form-group">
+							<label class="pure-material-radio">
+								<input type="radio" name="group">
+								<span>6 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 149</div></span> 
+							</label>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-warning save-meal" style="min-width: 100px">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sidenav-overlay" class="sidenav-overlay"></div>
+	<aside class="e-cart cart-site">
+		<div class="cart-column">
+			<div class="empty-cart" style="display: none;">
+				<figure>
+					<img src="img/empty-cart.png">
+				</figure>
+				<p>Your cart is empty<br>Add items to get started</p>
+			</div>
+			<div class="cart-header">
+				<h4>Your Packgae : <span>2 Meal/Week</span> <i class="fas fa-retweet e-changePlan"></i></h4>
+				<p>How many times a week do you want to deliver?</p>
+				<div class="d-flex space-bw">
+					<span id="del_1">1</span>
+					<span id="del_2">2</span>
+					<span id="del_3">3</span>
+					<span id="del_4">4</span>
+					<span id="del_5">5</span>
+					<span id="del_6">6</span>
+				</div>
+			</div> 
+			<div class="advance-add">
+				<div class="delivery_form active">
+					<fieldset>
+						<legend>Day 1:</legend>
+						<div class="input-group date" data-date-format="dd.mm.yyyy">
+							<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+							<div class="input-group-addon" >
+								<i class="far fa-calendar-alt"></i>
+							</div>
+						</div> 
+						<ul id="sortable2" class="droptrue"></ul>
+					</fieldset> 
+				</div> 
+				<div class="delivery_form">
+					<fieldset>
+						<legend>Day 2:</legend>
+						<div class="input-group date" data-date-format="dd.mm.yyyy">
+							<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+							<div class="input-group-addon" >
+								<i class="far fa-calendar-alt"></i>
+							</div>
+						</div> 
+						<ul id="sortable3" class="droptrue"></ul>
+					</fieldset> 
+				</div> 
+				<ul id="sortable1" class="droptrue item-added">
+					<li class="ui-state-default">
+						<div class="li-item-title"> 
+							<span>Beef with "Szechuan" Sauce on Rice</span>
+							<div class="d-flex space-bw">
+								<span class="t-store">San Francesco Foods</span>
+								<div class="e-edit">
+									<input type="number" value="1" title="Qty" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+								</div>
+								<span class="t-qty">Qty: 1</span>
+								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div> 
+					</li>
+					<li class="ui-state-default">
+						<div class="li-item-title"> 
+							<span>Beef with "Szechuan" Sauce on Rice</span>
+							<div class="d-flex space-bw">
+								<span class="t-store">San Francesco Foods</span>
+								<div class="e-edit">
+									<input type="number" value="1" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+								</div>
+								<span class="t-qty">Qty: 1</span>
+								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div> 
+					</li>
+					<li class="ui-state-default">
+						<div class="li-item-title"> 
+							<span>Beef with "Szechuan" Sauce on Rice</span>
+							<div class="d-flex space-bw">
+								<span class="t-store">San Francesco Foods</span>
+								<div class="e-edit">
+									<input type="number" value="3" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+								</div>
+								<span class="t-qty">Qty: 3</span>
+								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div> 
+					</li> 
+				</ul>  
+			</div> 
+		</div>
+		<div class="checkout-nav"> 
+			<a href="checkout.html" class="btn-checkout">Checkout</a>
+		</div>
+	</aside>
+	<div class="wrapper-container">
+		<header class="site-header clearfix">
+			<nav class="navbar nav-site">
+				<div class="container">
+					<div class="navbar-logo">
+						<a href="/"><img src="img/logo.png"></a>
+					</div> 
+					<div class="site-navigation primary-navigation" id="navbar">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="home.html">Home</a></li> 
+							<li><a href="#">Restaurants</a></li>
+							<li><a href="#">Orders</a></li>
+							<li><a href="sign-in.html" class="">Sign in</a></li>
+							<li><a href="javascript:;" class="show_cart"><i class="fas fa-shopping-cart"></i> <span>1</span></a></li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+			<div id="location" class="sidebar-container " role="complementary">
+				<div class="sidebar-inner">
+					<div class="widget-area clearfix">
+						<div id="azh_widget-4" class="widget widget_azh_widget">
+							<div data-section="section">
+								<div class="homepage-header-background" style="background-image: url('http://azexo.com/foodpicky/wp-content/uploads/2016/09/home.jpg')"></div>
+								<div class="static-header homepage-header">
+									<div class="container">
+										<h1>Order Delivery &amp; Take-Out </h1>
+										<p>Find restaurants, specials, and coupons for free</p>
+										<form method="get" class="azqf-query-form profiles" data-name="profiles" action="http://azexo.com/foodpicky/">
+											<div class="wrapper">
+												<div class="geo-location">
+													<div class="location">
+														<input name="location" type="text" placeholder="What is your location ?" value="" autocomplete="off">
+														<i class="fas fa-map-marker-alt"></i>
+													</div>
+												</div>
+												<div class="submit">
+													<button>Search</button>
+												</div>
+											</div>
+										</form>
+										<img src="http://azexo.com/foodpicky/wp-content/uploads/2016/09/steps.png" alt="steps">
+									</div>
+								</div>
+							</div>
+						</div>            
+					</div>
+				</div><!-- .sidebar-inner -->
+			</div> 
+		</header>
+		<div class="e-main">
+			<div class="e-heading">
+				<h3>35 restaurants matched your location: <span>Toronto, CA</span> – <a href="#location" class="scrollTo">Change Address</a></h3>
+			</div> 
+			<div class="e-container clearfix">
+				<div class="popular-products entry-content">
+					<h2 class="title">Popular This Week In Your City</h2>
+					<p class="subtitle">The easiest way to your favourite food</p>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="filters">
+								<ul>
+									<li class="is-checked" data-filter="*">All</li>
+									<li data-filter=".monday">Monday</li>
+									<li data-filter=".tuesday">Tuesday</li>
+									<li data-filter=".wednesday">Wednesday</li>
+									<li data-filter=".thursday">Thursday</li>
+									<li data-filter=".friday">Friday</li>
+									<li data-filter=".saturday">Saturday</li>
+									<li data-filter=".sunDay">SunDay</li>
+								</ul>
+							</div>
+						</div> 
+						<div class="col-md-12">
+							<div class="rows grid data-isotope restaurant-content"> 
+								<a href="restaurant_detail.html" class="grid-item friday monday">
+									<div class="item-r">
+										<div class="r-header">
+											<div class="r-thumbnail"> 
+												<img src="img/8.webp"> 
+											</div> 
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item monday wednesday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item monday friday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/13.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Fran's Restaurant</div>
+											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item friday saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/9.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item tuesday friday wednesday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item thursday monday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/13.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Fran's Restaurant</div>
+											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item sunDay saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/9.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div> 
+								</a>  
+								<a href="restaurant_detail.html" class="grid-item friday">
+									<div class="item-r">
+										<div class="r-header">
+											<div class="r-thumbnail"> 
+												<img src="img/8.webp"> 
+											</div> 
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item monday wednesday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item monday friday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/13.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Fran's Restaurant</div>
+											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item friday saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/9.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item tuesday friday wednesday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item thursday monday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/13.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Fran's Restaurant</div>
+											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item sunDay saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/9.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="restaurant_detail.html" class="grid-item saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+									</div> 
+								</a>  
+							</div>
+						</div>
+
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>  
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script>
+		$('.scrollTo').click(function(){
+			$('html, body').animate({
+				scrollTop: $( $(this).attr('href') ).offset().top
+			}, 500);
+			return false;
+		});
+
+		$(document).ready(function(){
+
+			$('.show_cart').click(function(){
+				$('body').addClass('modal-open');
+				$('.sidenav-overlay').addClass('in');
+				$('.e-cart').addClass('in');
+			});
+			$('.sidenav-overlay').click(function(){
+				$('body').removeClass('modal-open');
+				$('.sidenav-overlay').removeClass('in');
+				$('.e-cart').removeClass('in');
+			}); 
+			$('.save-meal').click(function(){ 
+				$('.change_plan').removeClass('d-flex');
+			});
+			$('.datepicker').datepicker(); 
+
+			var $grid = $('.grid').isotope({ 
+				itemSelector: '.grid-item',
+				layoutMode: 'fitRows',
+			});
+
+			var $buttonGroup = $('.filters');
+			$buttonGroup.on( 'click', 'li', function( event ) {
+				$buttonGroup.find('.is-checked').removeClass('is-checked');
+				var $button = $( event.currentTarget );
+				$button.addClass('is-checked');
+				var filterValue = $button.attr('data-filter');
+				$grid.isotope({ filter: filterValue });
+			});
+		});
+
+		$(window).scroll(function(){
+
+			if ($(window).scrollTop() >= 100) {
+				$('.nav-site').addClass('fixed'); 
+			}
+			else {
+				$('.nav-site').removeClass('fixed'); 
+			}
+
+		});
+
+
+		$( function() {
+			$( "ul.droptrue" ).sortable({
+				connectWith: "ul"
+			}); 
+
+			$( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+		} );
+
+	</script>
+</body>
+</html>
