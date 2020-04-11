@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+	<title>Epicater</title>
+
+	<!-- Custom fonts for this template-->
+	<link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&display=swap" rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<link href="css/bootstrap.min.css" rel="stylesheet">  
+	<link href="css/all.css" rel="stylesheet">
+	<link href="css/epicater.css" rel="stylesheet">
+
+</head>
+<body> 
+	<div id="sidenav-overlay" class="sidenav-overlay"></div>
+	<div class="dialog-added animated bounceInRight">
+		<div class="added-p">Successfully added to the shopping cart</div>
+	</div>
+	<div class="dialog change_plan">
+		<div class="gsc-container animated fadeIn">
+			<div class="gsc-images">
+				<img src="img/6.svg" repeat="no-repeat" type="image" class="gsc-image" style="right: -140px !important;top: -20px !important;transform: rotate(0deg) !important;position: absolute !important;object-fit: fill !important;object-position: 50% 50% !important;width: 408px !important;height: auto !important;">
+			</div>
+			<div class="gsc-body">
+				<div class="gsc-content gsc-no-label">
+					<div class="gsc-title">Which package do you want?</div>
+					<div class="gsc-description">
+						<div class="form-group">  
+							<label class="pure-material-radio">
+								<input type="radio" name="group" checked>
+								<span>2 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 49</div></span> 
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="pure-material-radio">
+								<input type="radio" name="group">
+								<span>4 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 99</div></span> 
+							</label>
+						</div> 
+						<div class="form-group">
+							<label class="pure-material-radio">
+								<input type="radio" name="group">
+								<span>6 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 149</div></span> 
+							</label>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-warning save-meal" style="min-width: 100px">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<aside class="e-cart cart-site">
+		<div class="cart-column">
+			<div class="empty-cart" style="display: none;">
+				<figure>
+					<img src="img/empty-cart.png">
+				</figure>
+				<p>Your cart is empty<br>Add items to get started</p>
+			</div>
+			<div class="cart-header">
+				<h4>Your Packgae : <span>2 Meal</span></h4>
+				<p>How many times a week do you want to deliver?</p>
+				<div class="d-flex space-bw">
+					<span id="del_1">1</span>
+					<span id="del_2">2</span>
+					<span id="del_3">3</span>
+					<span id="del_4">4</span>
+					<span id="del_5">5</span>
+					<span id="del_6">6</span>
+					<a href="javascript:;" class="more_day">More</a>
+				</div>
+				<div class="custom-dl">
+					<div class="d-flex">
+						<input type="text" class="form-control f-input input-text">
+						<button>Save</button>
+					</div>
+				</div>
+			</div> 
+			<div class="advance-add">
+				<div class="delivery_form active">
+					<fieldset>
+						<legend>Day 1:</legend>
+						<div class="input-group date" data-date-format="dd.mm.yyyy">
+							<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+							<div class="input-group-addon" >
+								<i class="far fa-calendar-alt"></i>
+							</div>
+						</div> 
+						<ul id="sortable2" class="droptrue"></ul>
+					</fieldset> 
+				</div> 
+				<div class="delivery_form">
+					<fieldset>
+						<legend>Day 2:</legend>
+						<div class="input-group date" data-date-format="dd.mm.yyyy">
+							<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+							<div class="input-group-addon" >
+								<i class="far fa-calendar-alt"></i>
+							</div>
+						</div> 
+						<ul id="sortable3" class="droptrue"></ul>
+					</fieldset> 
+				</div> 
+				<ul id="sortable1" class="droptrue item-added">
+					<li class="ui-state-default">
+						<div class="li-item-title"> 
+							<span>Beef with "Szechuan" Sauce on Rice</span>
+							<div class="d-flex space-bw">
+								<span class="t-store">San Francesco Foods</span>
+								<div class="e-edit">
+									<input type="number" value="1" title="Qty" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+								</div>
+								<span class="t-qty">Qty: 1</span>
+								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div> 
+					</li>
+					<li class="ui-state-default">
+						<div class="li-item-title"> 
+							<span>Beef with "Szechuan" Sauce on Rice</span>
+							<div class="d-flex space-bw">
+								<span class="t-store">San Francesco Foods</span>
+								<div class="e-edit">
+									<input type="number" value="1" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+								</div>
+								<span class="t-qty">Qty: 1</span>
+								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div> 
+					</li>
+					<li class="ui-state-default">
+						<div class="li-item-title"> 
+							<span>Beef with "Szechuan" Sauce on Rice</span>
+							<div class="d-flex space-bw">
+								<span class="t-store">San Francesco Foods</span>
+								<div class="e-edit">
+									<input type="number" value="3" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+								</div>
+								<span class="t-qty">Qty: 3</span>
+								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
+							</div>
+						</div> 
+					</li> 
+				</ul>  
+			</div> 
+		</div>
+		<div class="checkout-nav"> 
+			<a href="checkout.html" class="btn-checkout">Checkout</a>
+		</div>
+	</aside>
+	<div class="wrapper-container">
+		<header class="site-header clearfix">
+			<nav class="navbar nav-site fixed">
+				<div class="container">
+					<div class="navbar-logo">
+						<a href="/"><img src="img/logo.png"></a>
+					</div> 
+					<div class="site-navigation primary-navigation" id="navbar">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="home.html">Home</a></li>  
+							<li><a href="#">Orders</a></li>
+							<li><a href="sign-in.html" class="">Sign in</a></li>
+							<li><a href="javascript:;" class="show_cart"><i class="fas fa-shopping-cart"></i> <span>1</span></a></li>
+						</ul>
+
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="e-store-container clearfix">
+			<section class="e-store w-100">
+				<div class="e-store-heading">
+					<div class="e-banner">
+						<img src="img/2.jpg">
+					</div>
+					<div class="e-tt bg-w">
+						<div class="e-title-store">San Francesco Foods</div>
+						<div class="e-add-store">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+						<div class="e-opening"><i class="far fa-clock"></i> Open Hours:  9:00 AM - 21:00 PM</div>
+						<div class="e-rv-store">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star-half-alt"></i> 4.5
+						</div> 
+					</div>
+					<div class="e-categories ">
+						<div class="e-boxes">
+							<a href="javascript:;" class="active">Lunch Boxes</a>
+							<a href="javascript:;">Dinner Boxes</a> 
+						</div>
+					</div>
+					<div class="e-container-fluid">
+						<div class="e-menu">
+							<div class="i-menu">Available Lunch Boxes</div>
+							<div class="menu-box">
+								<div class="item-restaurant-row">
+									<div class="title-group">
+										<h4>Lunch Boxes</h4>
+									</div>
+									<div class="item-group-parrent">
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_1" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_1" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Salad</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Miso</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>California Roll</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Assorted Tempura</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Woaton Soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<div class="action-add">
+														<button class="btn btn-warning add_to_cart">Add to cart</button>
+														<div class="quantity"> 
+															<input type="number" step="1" min="0" max="" value="1" title="Qty" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
+														</div>
+													</div>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_2" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_2" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Salad</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Miso</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy California Roll</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Pork Gyoza(3pcs)</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Chicken/Beef</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Teriyaky W/Rice</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_3" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_3" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_4" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_4" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_5" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_5" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+									</div>
+									<div class="title-group">
+										<h4>Dinner Boxes</h4>
+									</div>
+									<div class="item-group-parrent"> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_6" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_6" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_7" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_7" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_8" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_8" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_9" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_9" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+										<div class="item-group">
+											<div class="item_collapse">
+												<div class="item-img">
+													<img src="img/10.webp">
+												</div>
+												<div class="item-content">
+													<div class="item-title">Beef with "Szechuan" Sauce on Rice</div>
+													<div class="item-tt">Lunch Boxes</div>
+												</div>
+												<div class="item-add">
+													<a href="javascript:;" data-toggle="collapse" data-target="#menu_10" class="add-item"><i class="fas fa-plus-square"></i></a>
+												</div>
+											</div>
+											<div id="menu_10" class="collapse menu-item">
+												<div class="dietary_preferences">
+													<h5>Dietary Preferences</h5>
+													<div class="d_p-content">
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Rice</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Garlic shrimp</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Omelet</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Spicy tofu soup</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Stir-fried cowpea</span>
+														</div>
+														<div class="d_p-item">
+															<i class="fas fa-check"></i>
+															<span>Steamed cauliflower</span>
+														</div> 
+													</div>
+													<button class="btn btn-warning add_to_cart">Add to cart</button>
+												</div>
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> 
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-logo">
+					<a href="/"><img src="https://epicater.ca/assets/epicater-logo1-a4700042232e34e85bd00d7638cd28f49c929620aa647ddd6ec80370e84fb706.png" alt="Footer Logo"></a>
+				</div>
+				<p>
+					<a href="/get_client">Catering</a> |
+					<a href="/epic_events">Epic Events</a> |
+					<a href="/join_the_team">Join The Team</a> |
+					<a href="/vendors#getStarted">Become a Vendor</a> |
+					<a href="/faq">FAQ</a>
+				</p>
+				<br>
+				<div class="footer-social">
+					<a target="_blank" href="mailto:info@epicater.ca"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+					<a target="_blank" href="https://twitter.com/EpicaterTO"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+					<a target="_blank" href="https://www.instagram.com/epicater/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>  
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> 
+	<script>  
+		$(document).ready(function(){    
+
+			$('.show_cart, .add_to_cart').click(function(){
+				$('body').addClass('modal-open');
+				$('.sidenav-overlay').addClass('in');
+				$('.e-cart').addClass('in');
+			});
+			$('.sidenav-overlay').click(function(){
+				$('body').removeClass('modal-open');
+				$('.sidenav-overlay').removeClass('in');
+				$('.e-cart').removeClass('in');
+			}); 
+
+			$('.add_to_cart').click(function(){
+				$('.dialog-added').show();
+			});
+			$('.datepicker').datepicker();
+
+
+		});
+		$( function() {
+			$( "ul.droptrue" ).sortable({
+				connectWith: "ul"
+			}); 
+
+			$( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+		} );
+
+		setTimeout(function() {
+			$(".dialog-added").hide()
+		}, 5000);
+
+	</script>
+</body>
+</html>

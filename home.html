@@ -18,45 +18,11 @@
 
 	<!-- Custom styles for this template-->
 	<link href="css/bootstrap.min.css" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
 	<link href="css/epicater.css" rel="stylesheet">
 
 </head>
 <body>
-	<div class="dialog change_plan">
-		<div class="gsc-container animated fadeIn">
-			<div class="gsc-images">
-				<img src="img/6.svg" repeat="no-repeat" type="image" class="gsc-image" style="right: -140px !important;top: -20px !important;transform: rotate(0deg) !important;position: absolute !important;object-fit: fill !important;object-position: 50% 50% !important;width: 408px !important;height: auto !important;">
-			</div>
-			<div class="gsc-body">
-				<div class="gsc-content gsc-no-label">
-					<div class="gsc-title">Which package do you want?</div>
-					<div class="gsc-description">
-						<div class="form-group">  
-							<label class="pure-material-radio">
-								<input type="radio" name="group" checked>
-								<span>2 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 49</div></span> 
-							</label>
-						</div>
-						<div class="form-group">
-							<label class="pure-material-radio">
-								<input type="radio" name="group">
-								<span>4 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 99</div></span> 
-							</label>
-						</div> 
-						<div class="form-group">
-							<label class="pure-material-radio">
-								<input type="radio" name="group">
-								<span>6 Meals/Week <div class="price_meals"><i class="fas fa-dollar-sign"></i> 149</div></span> 
-							</label>
-						</div>
-						<div class="form-group">
-							<button class="btn btn-warning save-meal" style="min-width: 100px">Save</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div id="sidenav-overlay" class="sidenav-overlay"></div>
 	<aside class="e-cart cart-site">
 		<div class="cart-column">
@@ -67,7 +33,7 @@
 				<p>Your cart is empty<br>Add items to get started</p>
 			</div>
 			<div class="cart-header">
-				<h4>Your Packgae : <span>2 Meal/Week</span> <i class="fas fa-retweet e-changePlan"></i></h4>
+				<h4>Your Packgae : <span>2 Meal</span></h4>
 				<p>How many times a week do you want to deliver?</p>
 				<div class="d-flex space-bw">
 					<span id="del_1">1</span>
@@ -76,6 +42,13 @@
 					<span id="del_4">4</span>
 					<span id="del_5">5</span>
 					<span id="del_6">6</span>
+					<a href="javascript:;" class="more_day">More</a>
+				</div>
+				<div class="custom-dl">
+					<div class="d-flex">
+						<input type="text" class="form-control f-input input-text">
+						<button>Save</button>
+					</div>
 				</div>
 			</div> 
 			<div class="advance-add">
@@ -159,8 +132,7 @@
 					</div> 
 					<div class="site-navigation primary-navigation" id="navbar">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="home.html">Home</a></li> 
-							<li><a href="#">Restaurants</a></li>
+							<li class="active"><a href="home.html">Home</a></li>  
 							<li><a href="#">Orders</a></li>
 							<li><a href="sign-in.html" class="">Sign in</a></li>
 							<li><a href="javascript:;" class="show_cart"><i class="fas fa-shopping-cart"></i> <span>1</span></a></li>
@@ -177,13 +149,17 @@
 								<div class="homepage-header-background" style="background-image: url('http://azexo.com/foodpicky/wp-content/uploads/2016/09/home.jpg')"></div>
 								<div class="static-header homepage-header">
 									<div class="container">
-										<h1>Order Delivery &amp; Take-Out </h1>
+										<h1>Order Delivery to Your Address </h1>
 										<p>Find restaurants, specials, and coupons for free</p>
-										<form method="get" class="azqf-query-form profiles" data-name="profiles" action="http://azexo.com/foodpicky/">
+										<form method="get" class="azqf-query-form profiles" data-name="profiles" action="">
 											<div class="wrapper">
 												<div class="geo-location">
 													<div class="location">
-														<input name="location" type="text" placeholder="What is your location ?" value="" autocomplete="off">
+														<select class="form-control selectpicker" id="role" > 
+															<option value="Owner">77 Charles St WToronto, ON M5S 1K5</option>
+															<option value="Buyer">206 Bloor St W, Toronto, ON M5S 1T8</option>
+															<option value="Manager">711 Bay StToronto, ON M5G 2J8</option> 
+														</select>
 														<i class="fas fa-map-marker-alt"></i>
 													</div>
 												</div>
@@ -203,7 +179,7 @@
 		</header>
 		<div class="e-main">
 			<div class="e-heading">
-				<h3>35 restaurants matched your location: <span>Toronto, CA</span> – <a href="#location" class="scrollTo">Change Address</a></h3>
+				<h3>35 restaurants matched your location: <span>77 Charles St WToronto, ON M5S 1K5</span> – <a href="#location" class="scrollTo">Change Address</a></h3>
 			</div> 
 			<div class="e-container clearfix">
 				<div class="popular-products entry-content">
@@ -592,7 +568,10 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>  
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script> 
 	<script>
+		$('.selectpicker').selectpicker()  
+
 		$('.scrollTo').click(function(){
 			$('html, body').animate({
 				scrollTop: $( $(this).attr('href') ).offset().top
@@ -612,9 +591,11 @@
 				$('.sidenav-overlay').removeClass('in');
 				$('.e-cart').removeClass('in');
 			}); 
-			$('.save-meal').click(function(){ 
-				$('.change_plan').removeClass('d-flex');
-			});
+
+			$('.more_day').click(function(){
+				$('.custom-dl').slideToggle(); 
+			}); 
+
 			$('.datepicker').datepicker(); 
 
 			var $grid = $('.grid').isotope({ 
