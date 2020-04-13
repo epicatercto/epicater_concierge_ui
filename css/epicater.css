@@ -1379,7 +1379,20 @@ section.e-content {
   position: relative;
   margin-bottom: 10px;
 }
+.d-fl-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
 
+.sp-bw .bootstrap-select.form-control {
+    width: 45% !important;
+}
+
+.sp-bw .input-group {
+    width: 50%;
+}
 fieldset {
   display: block;
   margin-inline-start: 2px;

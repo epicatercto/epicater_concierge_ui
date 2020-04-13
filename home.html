@@ -104,21 +104,18 @@
 						<fieldset>
 							<a href="javascript:;" class="del_delivery"><i class="fas fa-trash"></i></a>
 							<legend>Day 1:</legend>
-							<div class="input-group date" data-date-format="dd.mm.yyyy">
-								<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
-								<div class="input-group-addon" >
-									<i class="far fa-calendar-alt"></i>
-								</div>
-							</div> 
-							<div class="form-group mg-10 "> 
-								<label class="pure-material-checkbox">
-									<input type="checkbox" name="group">
-									<span>Lunch</span> 
-								</label> 
-								<label class="pure-material-checkbox">
-									<input type="checkbox" name="group">
-									<span>Dinner</span> 
-								</label> 
+							
+							<div class="form-group mg-10 d-fl-group sp-bw">
+								<select class="form-control selectpicker" id="role" > 
+									<option value="Lunch">Lunch</option>
+									<option value="Dinner">Dinner</option>  
+								</select>
+								<div class="input-group date" data-date-format="dd.mm.yyyy">
+									<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+									<div class="input-group-addon" >
+										<i class="far fa-calendar-alt"></i>
+									</div>
+								</div>  
 							</div>
 							<ul id="sortable2" class="droptrue"></ul>
 						</fieldset> 
@@ -126,22 +123,18 @@
 					<div class="delivery_form">
 						<fieldset>
 							<a href="javascript:;" class="del_delivery"><i class="fas fa-trash"></i></a>
-							<legend>Day 2:</legend>
-							<div class="input-group date" data-date-format="dd.mm.yyyy">
-								<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
-								<div class="input-group-addon" >
-									<i class="far fa-calendar-alt"></i>
-								</div>
-							</div> 
-							<div class="form-group mg-10 "> 
-								<label class="pure-material-checkbox">
-									<input type="checkbox" name="group_1">
-									<span>Lunch</span> 
-								</label> 
-								<label class="pure-material-checkbox">
-									<input type="checkbox" name="group_1">
-									<span>Dinner</span> 
-								</label> 
+							<legend>Day 2:</legend> 
+							<div class="form-group mg-10 d-fl-group sp-bw">
+								<select class="form-control selectpicker" id="role" > 
+									<option value="Lunch">Lunch</option>
+									<option value="Dinner">Dinner</option>  
+								</select>
+								<div class="input-group date" data-date-format="dd.mm.yyyy">
+									<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+									<div class="input-group-addon" >
+										<i class="far fa-calendar-alt"></i>
+									</div>
+								</div>  
 							</div>
 							<ul id="sortable3" class="droptrue"></ul>
 						</fieldset> 
