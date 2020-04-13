@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
-	<title>Epicater</title>
+	<title>Sign In</title>
 
 	<!-- Custom fonts for this template-->
 	<link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
@@ -22,13 +22,13 @@
 	<link href="css/epicater.css" rel="stylesheet">
 
 </head>
-<body class="modal-open"> 
+<body> 
 	<div class="wrapper-container">
 		<header class="site-header clearfix">
-			<nav class="navbar nav-site">
+			<nav class="navbar nav-site fixed">
 				<div class="container">
 					<div class="navbar-logo">
-						<a href="#"><img src="img/logo.png"></a>
+						<a href="/"><img src="img/logo.png"></a>
 					</div> 
 					<div class="site-navigation primary-navigation" id="navbar">
 						<ul class="nav navbar-nav">
@@ -42,43 +42,25 @@
 				</div>
 			</nav>
 		</header>
-		<div id="location" class="sidebar-container " role="complementary">
-			<div class="sidebar-inner">
-				<div class="widget-area clearfix">
-					<div id="azh_widget-4" class="widget widget_azh_widget">
-						<div data-section="section">
-							<div class="homepage-header-background" style="background-image: url('http://azexo.com/foodpicky/wp-content/uploads/2016/09/home.jpg')"></div>
-							<div class="static-header ">
-								<div class="container">
-									<div class="login">
+		<div class="login mt-100">
 
-										<h1><img src="img/logo-black.png" width="200px"></h1>
+			<h1><img src="img/logo-black.png" width="200px"></h1>
 
-										<form action="location.html" method="POST">
+			<form action="" method="POST">
 
-											<input placeholder="Email Address" type="text" name="username" >
-											<input placeholder="Password" type="password" name="password">
-											<div class="form-group">  
-												<label class="pure-material-checkbox">
-													<input type="checkbox" name="group">
-													<span>Remember me</span> 
-												</label>
-											</div>
-											<input type="submit" value="Log In" /><br>
+				<input placeholder="First Name" type="text" name="firstname" >
+				<input placeholder="Last Name" type="text" name="lastname">
+				<input placeholder="Email Address" type="text" name="email" >
+				<input placeholder="Phone" type="text" name="phone">
+				<input placeholder="Password" type="password" name="password" >
+				<input placeholder="Confirm Password" type="password" name="confirmpassword"> 
+				<input type="submit" value="Sign Up" /><br>
 
-										</form> 
-										<div class="divider"><b>OR</b></div> 
-										<div class="fbwrapper"><p>Don't have an account? <a href="sign-up.html">Sign up</a></p></div> 
-										<div class="forgotwrapper"><div class="forgot"><a href="#">Forgot password?</a></div></div>
-									</div>  
-								</div>
-							</div>            
-						</div>
-					</div>            
-				</div>
-			</div><!-- .sidebar-inner -->
-		</div> 
-	</div> 
+			</form> 
+			<div class="divider"><b>OR</b></div> 
+			<div class="fbwrapper"><p>Have an account? <a href="sign-in.html">Sign In</a></p></div>  
+		</div>  
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
