@@ -23,6 +23,69 @@
 
 </head>
 <body>
+	<div class="loader"> 
+		<div class="cssload-container">
+			<div class="cssload-circle"></div>
+			<div class="cssload-circle"></div>
+		</div>
+	</div>
+	<div class="quickview-modal">
+		<div class="kt-popup-quickview ">
+			<div class="quickview-content">
+				<button title="Close (Esc)" type="button" class="mfp-close">&times;</button>
+				<div class="details-thumb">
+					<div class="details-item">
+						<img src="img/8.webp">
+					</div>
+				</div>
+				<div class="details-infor">
+					<h1 class="product-title">Mangia & Bevi</h1>
+					<div class="location-pr">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+					<div class="dietary_preferences">
+						<h5>Dietary Preferences</h5>
+						<div class="d_p-content">
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Salad</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Miso</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>California Roll</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Assorted Tempura</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Woaton Soup</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Steamed cauliflower</span>
+							</div> 
+						</div> 
+					</div>
+					<div class="add-to-box">
+						<div class="add-to-cart">
+							<div class="pull-left">
+								<div class="custom pull-left">
+									<button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
+									<input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
+									<button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
+								</div>
+							</div>
+							<button class="button btn-cart" title="Add to Cart" type="button">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="sidenav-overlay" class="sidenav-overlay"></div>
 	<aside class="e-cart cart-site">
 		<div class="cart-column">
@@ -32,95 +95,74 @@
 				</figure>
 				<p>Your cart is empty<br>Add items to get started</p>
 			</div>
-			<div class="cart-header">
-				<h4>Your Packgae : <span>2 Meal</span></h4>
-				<p>How many times a week do you want to deliver?</p>
-				<div class="d-flex space-bw">
-					<span id="del_1">1</span>
-					<span id="del_2">2</span>
-					<span id="del_3">3</span>
-					<span id="del_4">4</span>
-					<span id="del_5">5</span>
-					<span id="del_6">6</span>
-					<a href="javascript:;" class="more_day">More</a>
-				</div>
-				<div class="custom-dl">
-					<div class="d-flex">
-						<input type="text" class="form-control f-input input-text">
-						<button>Save</button>
+			<div class="inempty-cart">
+				<div class="cart-header">
+					<h4><a href="javascript:;" class="back-home"><i class="fas fa-arrow-left"></i></a> Your Cart</h4> 
+				</div> 
+				<div class="advance-add">
+					<div class="delivery_form active">
+						<fieldset>
+							<a href="javascript:;" class="del_delivery"><i class="fas fa-trash"></i></a>
+							<legend>Day 1:</legend>
+							<div class="input-group date" data-date-format="dd.mm.yyyy">
+								<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+								<div class="input-group-addon" >
+									<i class="far fa-calendar-alt"></i>
+								</div>
+							</div> 
+							<div class="form-group mg-10 "> 
+								<label class="pure-material-radio">
+									<input type="radio" name="group">
+									<span>Lunch</span> 
+								</label> 
+								<label class="pure-material-radio">
+									<input type="radio" name="group">
+									<span>Dinner</span> 
+								</label> 
+							</div>
+							<ul id="sortable2" class="droptrue"></ul>
+						</fieldset> 
+					</div> 
+					<div class="delivery_form">
+						<fieldset>
+							<a href="javascript:;" class="del_delivery"><i class="fas fa-trash"></i></a>
+							<legend>Day 2:</legend>
+							<div class="input-group date" data-date-format="dd.mm.yyyy">
+								<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+								<div class="input-group-addon" >
+									<i class="far fa-calendar-alt"></i>
+								</div>
+							</div> 
+							<div class="form-group mg-10 "> 
+								<label class="pure-material-radio">
+									<input type="radio" name="group_1">
+									<span>Lunch</span> 
+								</label> 
+								<label class="pure-material-radio">
+									<input type="radio" name="group_1">
+									<span>Dinner</span> 
+								</label> 
+							</div>
+							<ul id="sortable3" class="droptrue"></ul>
+						</fieldset> 
 					</div>
-				</div>
-			</div> 
-			<div class="advance-add">
-				<div class="delivery_form active">
-					<fieldset>
-						<legend>Day 1:</legend>
-						<div class="input-group date" data-date-format="dd.mm.yyyy">
-							<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
-							<div class="input-group-addon" >
-								<i class="far fa-calendar-alt"></i>
-							</div>
-						</div> 
-						<ul id="sortable2" class="droptrue"></ul>
-					</fieldset> 
+					<div class="form-group ">
+						<a href="javascript:;" class="add-a-del"><i class="fas fa-plus-circle"></i> Add new address</a>
+					</div>   
 				</div> 
-				<div class="delivery_form">
-					<fieldset>
-						<legend>Day 2:</legend>
-						<div class="input-group date" data-date-format="dd.mm.yyyy">
-							<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
-							<div class="input-group-addon" >
-								<i class="far fa-calendar-alt"></i>
-							</div>
-						</div> 
-						<ul id="sortable3" class="droptrue"></ul>
-					</fieldset> 
-				</div> 
-				<ul id="sortable1" class="droptrue item-added">
-					<li class="ui-state-default">
-						<div class="li-item-title"> 
-							<span>Beef with "Szechuan" Sauce on Rice</span>
-							<div class="d-flex space-bw">
-								<span class="t-store">San Francesco Foods</span>
-								<div class="e-edit">
-									<input type="number" value="1" title="Qty" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
-								</div>
-								<span class="t-qty">Qty: 1</span>
-								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
-							</div>
-						</div> 
-					</li>
-					<li class="ui-state-default">
-						<div class="li-item-title"> 
-							<span>Beef with "Szechuan" Sauce on Rice</span>
-							<div class="d-flex space-bw">
-								<span class="t-store">San Francesco Foods</span>
-								<div class="e-edit">
-									<input type="number" value="1" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
-								</div>
-								<span class="t-qty">Qty: 1</span>
-								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
-							</div>
-						</div> 
-					</li>
-					<li class="ui-state-default">
-						<div class="li-item-title"> 
-							<span>Beef with "Szechuan" Sauce on Rice</span>
-							<div class="d-flex space-bw">
-								<span class="t-store">San Francesco Foods</span>
-								<div class="e-edit">
-									<input type="number" value="3" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric"> 
-								</div>
-								<span class="t-qty">Qty: 3</span>
-								<a href="javascript:;" class="remove-item"><i class="fas fa-trash"></i></a>
-							</div>
-						</div> 
-					</li> 
-				</ul>  
-			</div> 
+			</div>
 		</div>
 		<div class="checkout-nav"> 
-			<a href="checkout.html" class="btn-checkout">Checkout</a>
+			<div class="d-fl-group">
+				<a href="checkout.html">
+					<div class="d-total">
+						<span>Total: $49</span>
+					</div>
+					<div class="d-checkout">
+						Checkout <i class="fas fa-arrow-right"></i>
+					</div>
+				</a>
+			</div>
 		</div>
 	</aside>
 	<div class="wrapper-container">
@@ -128,7 +170,7 @@
 			<nav class="navbar nav-site">
 				<div class="container">
 					<div class="navbar-logo">
-						<a href="/"><img src="img/logo.png"></a>
+						<a href="#"><img src="img/logo.png"></a>
 					</div> 
 					<div class="site-navigation primary-navigation" id="navbar">
 						<ul class="nav navbar-nav">
@@ -141,42 +183,42 @@
 					</div>
 				</div>
 			</nav>
-			<div id="location" class="sidebar-container " role="complementary">
-				<div class="sidebar-inner">
-					<div class="widget-area clearfix">
-						<div id="azh_widget-4" class="widget widget_azh_widget">
-							<div data-section="section">
-								<div class="homepage-header-background" style="background-image: url('http://azexo.com/foodpicky/wp-content/uploads/2016/09/home.jpg')"></div>
-								<div class="static-header homepage-header">
-									<div class="container">
-										<h1>Order Delivery to Your Address </h1>
-										<p>Find restaurants, specials, and coupons for free</p>
-										<form method="get" class="azqf-query-form profiles" data-name="profiles" action="">
-											<div class="wrapper">
-												<div class="geo-location">
-													<div class="location">
-														<select class="form-control selectpicker" id="role" > 
-															<option value="Owner">77 Charles St WToronto, ON M5S 1K5</option>
-															<option value="Buyer">206 Bloor St W, Toronto, ON M5S 1T8</option>
-															<option value="Manager">711 Bay StToronto, ON M5G 2J8</option> 
-														</select>
-														<i class="fas fa-map-marker-alt"></i>
-													</div>
-												</div>
-												<div class="submit">
-													<button>Search</button>
+		</header>
+		<div id="location" class="sidebar-container " role="complementary">
+			<div class="sidebar-inner">
+				<div class="widget-area clearfix">
+					<div id="azh_widget-4" class="widget widget_azh_widget">
+						<div data-section="section">
+							<div class="homepage-header-background" style="background-image: url('http://azexo.com/foodpicky/wp-content/uploads/2016/09/home.jpg')"></div>
+							<div class="static-header homepage-header">
+								<div class="container">
+									<h1>Order Delivery to Your Address </h1>
+									<p>Find restaurants, specials, and coupons for free</p>
+									<form method="get" class="azqf-query-form profiles" data-name="profiles" action="">
+										<div class="wrapper">
+											<div class="geo-location">
+												<div class="location">
+													<select class="form-control selectpicker" id="role" > 
+														<option value="Owner">77 Charles St WToronto, ON M5S 1K5</option>
+														<option value="Buyer">206 Bloor St W, Toronto, ON M5S 1T8</option>
+														<option value="Manager">711 Bay StToronto, ON M5G 2J8</option> 
+													</select>
+													<i class="fas fa-map-marker-alt"></i>
 												</div>
 											</div>
-										</form>
-										<img src="http://azexo.com/foodpicky/wp-content/uploads/2016/09/steps.png" alt="steps">
-									</div>
+											<div class="submit">
+												<button>Search</button>
+											</div>
+										</div>
+									</form>
+									<img src="http://azexo.com/foodpicky/wp-content/uploads/2016/09/steps.png" alt="steps">
 								</div>
 							</div>
-						</div>            
-					</div>
-				</div><!-- .sidebar-inner -->
-			</div> 
-		</header>
+						</div>
+					</div>            
+				</div>
+			</div><!-- .sidebar-inner -->
+		</div> 
 		<div class="e-main">
 			<div class="e-heading">
 				<h3>35 restaurants matched your location: <span>77 Charles St WToronto, ON M5S 1K5</span> – <a href="#location" class="scrollTo">Change Address</a></h3>
@@ -188,9 +230,8 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="filters">
-								<ul>
-									<li class="is-checked" data-filter="*">All</li>
-									<li data-filter=".monday">Monday</li>
+								<ul> 
+									<li data-filter=".monday" class="is-checked">Monday</li>
 									<li data-filter=".tuesday">Tuesday</li>
 									<li data-filter=".wednesday">Wednesday</li>
 									<li data-filter=".thursday">Thursday</li>
@@ -201,8 +242,251 @@
 							</div>
 						</div> 
 						<div class="col-md-12">
-							<div class="rows grid data-isotope restaurant-content"> 
-								<a href="restaurant_detail.html" class="grid-item friday monday">
+							<div class="rows grid data-isotope restaurant-content">  
+								<div class="grid-item friday monday" >
+									<div class="item-r">
+										<div class="r-header">
+											<div class="r-thumbnail"> 
+												<img src="img/8.webp">  
+												<div class="product-button-wrap">
+													<div class="product-button">
+														<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+													</div>
+													<div class="product-button">
+														<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div> 
+										</div>
+									</div> 
+								</div>
+								<div class="grid-item monday wednesday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap fl-column">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="product-button-center">
+												<div class="product-button">
+													<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+												</div>
+												<div class="product-button">
+													<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item monday friday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/13.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Fran's Restaurant</div>
+											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item friday saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/9.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item tuesday friday wednesday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item thursday monday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/13.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Fran's Restaurant</div>
+											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item sunDay saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/9.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">San Francesco Foods</div>
+											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="grid-item saturday">
+									<div class="item-r">
+										<div class="r-header"> 
+											<div class="r-thumbnail"> 
+												<img src="img/11.webp"> 
+											</div>
+										</div>
+										<div class="r-desc">
+											<div class="r-title-f">Mangia & Bevi</div>
+											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+											<div class="r-reviews">
+												<div class="r-rv">
+													<i class="fas fa-star"></i> 4.5
+												</div>
+												<div class="r-del">
+													<i class="far fa-clock"></i>
+													<span>Next Delivery: 9:00</span>
+												</div>
+											</div>
+										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
+									</div> 
+								</div>  
+								<div class="grid-item friday">
 									<div class="item-r">
 										<div class="r-header">
 											<div class="r-thumbnail"> 
@@ -222,9 +506,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item monday wednesday">
+								</div>
+								<div class="grid-item monday wednesday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -244,9 +536,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item monday friday">
+								</div>
+								<div class="grid-item monday friday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -266,9 +566,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item friday saturday">
+								</div>
+								<div class="grid-item friday saturday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -288,9 +596,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item tuesday friday wednesday">
+								</div>
+								<div class="grid-item tuesday friday wednesday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -310,9 +626,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item thursday monday">
+								</div>
+								<div class="grid-item thursday monday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -332,9 +656,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item sunDay saturday">
+								</div>
+								<div class="grid-item sunDay saturday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -354,9 +686,17 @@
 												</div>
 											</div>
 										</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
+											</div>
+										</div>
 									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item saturday">
+								</div>
+								<div class="grid-item saturday">
 									<div class="item-r">
 										<div class="r-header"> 
 											<div class="r-thumbnail"> 
@@ -376,184 +716,16 @@
 												</div>
 											</div>
 										</div>
-									</div> 
-								</a>  
-								<a href="restaurant_detail.html" class="grid-item friday">
-									<div class="item-r">
-										<div class="r-header">
-											<div class="r-thumbnail"> 
-												<img src="img/8.webp"> 
-											</div> 
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">San Francesco Foods</div>
-											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
+										<div class="product-button-wrap">
+											<div class="product-button">
+												<a class="button button-secondary button-zakaria quickview" href="javascript:;" data-toggle="tooltip" title="Quickview"><i class="fas fa-search"></i></a>
+											</div>
+											<div class="product-button">
+												<a class="button button-primary button-zakaria fl-shopping" data-toggle="tooltip" title="Add to card" href="javascript:;"><i class="fas fa-shopping-cart"></i></a>
 											</div>
 										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item monday wednesday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/11.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">Mangia & Bevi</div>
-											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item monday friday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/13.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">Fran's Restaurant</div>
-											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item friday saturday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/9.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">San Francesco Foods</div>
-											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item tuesday friday wednesday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/11.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">Mangia & Bevi</div>
-											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item thursday monday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/13.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">Fran's Restaurant</div>
-											<div class="r-adds">585 College St, Toronto, ON M6G 1B2, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item sunDay saturday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/9.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">San Francesco Foods</div>
-											<div class="r-adds">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="restaurant_detail.html" class="grid-item saturday">
-									<div class="item-r">
-										<div class="r-header"> 
-											<div class="r-thumbnail"> 
-												<img src="img/11.webp"> 
-											</div>
-										</div>
-										<div class="r-desc">
-											<div class="r-title-f">Mangia & Bevi</div>
-											<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
-											<div class="r-reviews">
-												<div class="r-rv">
-													<i class="fas fa-star"></i> 4.5
-												</div>
-												<div class="r-del">
-													<i class="far fa-clock"></i>
-													<span>Next Delivery: 9:00</span>
-												</div>
-											</div>
-										</div>
-									</div> 
-								</a>  
+									</div>  
+								</div>  
 							</div>
 						</div>
 
@@ -570,6 +742,9 @@
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script> 
 	<script>
+		$(window).on('load',function() {'use strict';
+			$(".loader").fadeOut("slow");
+		});
 		$('.selectpicker').selectpicker()  
 
 		$('.scrollTo').click(function(){
@@ -578,19 +753,31 @@
 			}, 500);
 			return false;
 		});
-
+		$('[data-toggle="tooltip"]').tooltip();
 		$(document).ready(function(){
 
-			$('.show_cart').click(function(){
+			$('.show_cart, .fl-shopping').click(function(){
 				$('body').addClass('modal-open');
 				$('.sidenav-overlay').addClass('in');
 				$('.e-cart').addClass('in');
 			});
-			$('.sidenav-overlay').click(function(){
+			$('.sidenav-overlay, .back-home').click(function(){
 				$('body').removeClass('modal-open');
 				$('.sidenav-overlay').removeClass('in');
 				$('.e-cart').removeClass('in');
 			}); 
+			$('.btn-cart').click(function(){
+				$('body').addClass('modal-open');
+				$('.sidenav-overlay').addClass('in');
+				$('.e-cart').addClass('in');
+				$('.quickview-modal').hide();
+			});
+			$('.quickview').click(function(){  
+				$('.quickview-modal').show();
+			});
+			$('.mfp-close').click(function(){  
+				$('.quickview-modal').hide();
+			});
 
 			$('.more_day').click(function(){
 				$('.custom-dl').slideToggle(); 
@@ -599,7 +786,7 @@
 			$('.datepicker').datepicker(); 
 
 			var $grid = $('.grid').isotope({ 
-				itemSelector: '.grid-item',
+				itemSelector: '',
 				layoutMode: 'fitRows',
 			});
 
