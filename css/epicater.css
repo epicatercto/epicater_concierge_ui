@@ -2014,7 +2014,7 @@ input[type='radio'] {
 }
 .static-header .container .azqf-query-form .wrapper {
   display: flex;
-  width: 650px;
+  width: 550px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -2105,21 +2105,14 @@ input[type='radio'] {
   padding: 0 20px;
   background: transparent;
   font-weight: 500;
-}
-.geo-location.f-box {
-    width: 30%;
-    margin: 0 10px;
-}
-
-.geo-location.f-box .bootstrap-select>.dropdown-toggle {
-    padding-left: 20px;
-}
+} 
 .filters ul{
   display: flex;
   justify-content: center;
   list-style: none;
-  margin: 30px 15px;
-  justify-content: space-around;
+  margin: 30px 10px;
+  justify-content: space-between;
+  padding: 0;
 }
 .filters ul li{
   display: inlnie-block;
@@ -2883,6 +2876,60 @@ input[type='radio'] {
     color: #b5b5b5;
     font-size: 12px;
     margin-bottom: 0;
+}
+.r-filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.f-foodbox {
+    max-width: 33%;
+    width: 100%;
+    margin-right: 20px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.f-foodbox .bootstrap-select>.dropdown-toggle {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px 0 30px;
+}
+
+.f-foodbox i, .f-s-foodname i {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    z-index: 1;
+    color: #d0d0d0;
+}
+
+.f-s-foodname {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0 10px 0 0;
+}
+
+.f-s-foodname input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 15px 0 30px;
+    outline: none;
+}
+ 
+
+.f-s-foodname i {
+    left: 10px;
+}
+
+.f-foodbox .dropdown.bootstrap-select.form-control {
+    height: 40px;
 }
 @media screen and (max-width: 425px) {
   .categories-box {

@@ -198,15 +198,7 @@
 													</select>
 													<i class="fas fa-map-marker-alt"></i>
 												</div>
-											</div>
-											<div class="geo-location f-box">
-												<div class="location">
-													<select class="form-control selectpicker" id="role" > 
-														<option value="Lunch">Lunch</option>
-														<option value="Dinner">Dinner</option> 
-													</select> 
-												</div>
-											</div>
+											</div> 
 											<div class="submit">
 												<button>Search</button>
 											</div>
@@ -230,7 +222,7 @@
 					<p class="subtitle">The easiest way to your favourite food</p>
 					<div class="row">
 						<div class="col-md-12">
-							<div class="filters">
+							<div class="filters"> 
 								<ul> 
 									<li data-filter=".monday" class="is-checked">Monday</li>
 									<li data-filter=".tuesday">Tuesday</li>
@@ -243,6 +235,21 @@
 							</div>
 						</div> 
 						<div class="col-md-12">
+							<div class="rows">
+								<div class="r-filter">
+									<div class="f-foodbox">
+										<select class="form-control selectpicker" id="role" > 
+											<option value="Lunch">Lunch</option>
+											<option value="Dinner">Dinner</option> 
+										</select>
+										<i class="fas fa-utensils"></i>
+									</div>
+									<div class="f-s-foodname">
+										<input type="text" name="" placeholder="Enter restaurant, foodname ...">
+										<i class="fas fa-search"></i>
+									</div>
+								</div>
+							</div>
 							<div class="rows grid data-isotope restaurant-content">   
 								<div class="grid-item monday wednesday">
 									<article class="thumbnail-classic block-1">
