@@ -2010,10 +2010,11 @@ input[type='radio'] {
 }
 .static-header .container .azqf-query-form {
   margin: 30px 0;
+  width: 100%;
 }
 .static-header .container .azqf-query-form .wrapper {
   display: flex;
-  width: 550px;
+  width: 650px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -2093,6 +2094,7 @@ input[type='radio'] {
 }
 .bootstrap-select .dropdown-menu li a {
   padding: 10px 20px;
+  background: white;
 }
 
 .bootstrap-select .dropdown-menu li.active a {
@@ -2103,6 +2105,14 @@ input[type='radio'] {
   padding: 0 20px;
   background: transparent;
   font-weight: 500;
+}
+.geo-location.f-box {
+    width: 30%;
+    margin: 0 10px;
+}
+
+.geo-location.f-box .bootstrap-select>.dropdown-toggle {
+    padding-left: 20px;
 }
 .filters ul{
   display: flex;
@@ -2520,7 +2530,7 @@ input[type='radio'] {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.9);
     transform: scale(0.8);
     transition: all .3s ease;
     opacity: 0;
