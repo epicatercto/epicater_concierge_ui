@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+	<title>Epicater</title>
+
+	<!-- Custom fonts for this template-->
+	<link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<link href="../css/bootstrap.min.css" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+	<link href="../css/epicater.css" rel="stylesheet">
+	<link href="../css/new-ui.css" rel="stylesheet">
+
+</head>
+<body class="user-login">
+	<div class="loader"> 
+		<div class="cssload-container">
+			<div class="cssload-circle"></div>
+			<div class="cssload-circle"></div>
+		</div>
+	</div>
+	<div class="quickview-modal">
+		<div class="kt-popup-quickview ">
+			<div class="quickview-content">
+				<button title="Close (Esc)" type="button" class="mfp-close">&times;</button>
+				<div class="details-thumb">
+					<div class="details-item">
+						<img src="../img/8.webp">
+					</div>
+				</div>
+				<div class="details-infor">
+					<h1 class="product-title">Mangia & Bevi</h1>
+					<div class="location-pr">10 Clinton St, Toronto, ON M6J 2P1, Canada</div>
+					<div class="dietary_preferences">
+						<h5>Dietary Preferences</h5>
+						<div class="d_p-content">
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Salad</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Miso</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>California Roll</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Assorted Tempura</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Woaton Soup</span>
+							</div>
+							<div class="d_p-item">
+								<i class="fas fa-check"></i>
+								<span>Steamed cauliflower</span>
+							</div> 
+						</div> 
+					</div>
+					<div class="add-to-box">
+						<div class="add-to-cart">
+							<div class="pull-left">
+								<div class="custom pull-left">
+									<button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="fa fa-minus">&nbsp;</i></button>
+									<input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
+									<button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button"><i class="fa fa-plus">&nbsp;</i></button>
+								</div>
+							</div>
+							<button class="button btn-cart" title="Add to Cart" type="button">Add to Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sidenav-overlay" class="sidenav-overlay"></div>
+	<aside class="e-cart cart-site">
+		<div class="cart-column">
+			<div class="empty-cart" style="display: none;">
+				<figure>
+					<img src="../img/empty-cart.png">
+				</figure>
+				<p>Your cart is empty<br>Add items to get started</p>
+			</div>
+			<div class="inempty-cart">
+				<div class="cart-header">
+					<h4><a href="javascript:;" class="back-home"><i class="fas fa-arrow-left"></i></a> Your Cart</h4> 
+				</div> 
+				<div class="advance-add">
+					<div class="delivery_form active">
+						<fieldset>
+							<a href="javascript:;" class="del_delivery"><i class="fas fa-trash"></i></a>
+							<legend>Day 1:</legend>
+							
+							<div class="form-group mg-10 d-fl-group sp-bw">
+								<select class="form-control selectpicker" id="role" > 
+									<option value="Lunch">Lunch</option>
+									<option value="Dinner">Dinner</option>  
+								</select>
+								<div class="input-group date" data-date-format="dd.mm.yyyy">
+									<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+									<div class="input-group-addon" >
+										<i class="far fa-calendar-alt"></i>
+									</div>
+								</div>  
+							</div>
+							<ul id="sortable2" class="droptrue"></ul>
+						</fieldset> 
+					</div> 
+					<div class="delivery_form">
+						<fieldset>
+							<a href="javascript:;" class="del_delivery"><i class="fas fa-trash"></i></a>
+							<legend>Day 2:</legend> 
+							<div class="form-group mg-10 d-fl-group sp-bw">
+								<select class="form-control selectpicker" id="role" > 
+									<option value="Lunch">Lunch</option>
+									<option value="Dinner">Dinner</option>  
+								</select>
+								<div class="input-group date" data-date-format="dd.mm.yyyy">
+									<input  type="text" class="form-control datepicker" placeholder="dd.mm.yyyy">
+									<div class="input-group-addon" >
+										<i class="far fa-calendar-alt"></i>
+									</div>
+								</div>  
+							</div>
+							<ul id="sortable3" class="droptrue"></ul>
+						</fieldset> 
+					</div>
+					<div class="form-group ">
+						<a href="javascript:;" class="add-a-del"><i class="fas fa-plus-circle"></i> Add new address</a>
+					</div>   
+				</div> 
+			</div>
+		</div>
+		<div class="checkout-nav"> 
+			<div class="d-fl-group">
+				<a href="checkout.html">
+					<div class="d-total">
+						<span>Total: $49</span>
+					</div>
+					<div class="d-checkout">
+						Checkout <i class="fas fa-arrow-right"></i>
+					</div>
+				</a>
+			</div>
+		</div>
+	</aside>
+	<div class="wrapper-container">
+		<header class="site-header clearfix">
+			<nav class="navbar nav-site fixed E1E5E8">
+				<div class="container">
+					<div class="navbar-logo">
+						<a href="home.html" class="logo-w"><img src="../img/logo.png"></a>
+						<a href="home.html" class="logo-color"><img src="../img/logo-color.png"></a>
+					</div> 
+					<div class="site-navigation primary-navigation" id="navbar">
+						<ul class="nav navbar-nav ul-signed"> 
+							<li class="order-history">
+								<a href="orders.html"  data-toggle="tooltip" title="Order History" data-placement="bottom">
+									<div class="c5151 c51425"><svg class="MuiSvgIcon-root c5149 c51423" focusable="false" viewBox="0 0 24 24" color="grey" aria-hidden="true" role="presentation"><g><path d="M4,4.66666667 L4,20.6216667 C4.00018567,20.6876463 4.03927667,20.7473051 4.09969561,20.7738173 C4.16011455,20.8003294 4.23048578,20.7887033 4.27916667,20.7441667 L5.1075,19.9866667 C5.2348697,19.8701412 5.4301303,19.8701412 5.5575,19.9866667 L6.55166667,20.8966667 C6.61535152,20.9549294 6.71298182,20.9549294 6.77666667,20.8966667 L7.77166667,19.9866667 C7.89903636,19.8701412 8.09429697,19.8701412 8.22166667,19.9866667 L9.21583333,20.8966667 C9.27951818,20.9549294 9.37714848,20.9549294 9.44083333,20.8966667 L10.4366667,19.9858333 C10.5637899,19.8703209 10.7578767,19.8703209 10.885,19.9858333 L11.895,20.9025 C11.9585616,20.9602562 12.055605,20.9602562 12.1191667,20.9025 L13.1141667,19.9916667 C13.2415364,19.8751412 13.436797,19.8751412 13.5641667,19.9916667 L14.5591667,20.9016667 C14.6228515,20.9599294 14.7204818,20.9599294 14.7841667,20.9016667 L15.7783333,19.9916667 C15.905703,19.8751412 16.1009636,19.8751412 16.2283333,19.9916667 L17.2233333,20.9016667 C17.2870182,20.9599294 17.3846485,20.9599294 17.4483333,20.9016667 L18.4425,19.9916667 C18.5699915,19.8746321 18.7658418,19.8746321 18.8933333,19.9916667 L19.7208333,20.7491667 C19.7695142,20.7937033 19.8398854,20.8053294 19.9003044,20.7788173 C19.9607233,20.7523051 19.9998143,20.6926463 20,20.6266667 L20,4.66666667 C20,3.74619208 19.2538079,3 18.3333333,3 L5.66666667,3 C4.74619208,3 4,3.74619208 4,4.66666667 Z M18,13.6666667 C18,14.126904 17.626904,14.5 17.1666667,14.5 L6.83333333,14.5 C6.37309604,14.5 6,14.126904 6,13.6666667 L6,13.6666667 C6,13.2064294 6.37309604,12.8333333 6.83333333,12.8333333 L17.1666667,12.8333333 C17.626904,12.8333333 18,13.2064294 18,13.6666667 L18,13.6666667 Z M17.1666667,11.1666667 L6.83333333,11.1666667 C6.37309604,11.1666667 6,10.7935706 6,10.3333333 C6,9.87309604 6.37309604,9.5 6.83333333,9.5 L17.1666667,9.5 C17.626904,9.5 18,9.87309604 18,10.3333333 C18,10.7935706 17.626904,11.1666667 17.1666667,11.1666667 Z M17.1666667,7.83333333 L6.83333333,7.83333333 C6.37309604,7.83333333 6,7.46023729 6,7 C6,6.53976271 6.37309604,6.16666667 6.83333333,6.16666667 L17.1666667,6.16666667 C17.626904,6.16666667 18,6.53976271 18,7 C18,7.46023729 17.626904,7.83333333 17.1666667,7.83333333 Z"></path></g></svg></div>
+								</a>
+							</li>
+							<li class="or-cart"><a href="javascript:;" data-toggle="tooltip" title="View Cart" data-placement="bottom" class="show_cart"><i class="fas fa-shopping-cart"></i></a></li> 
+							<li class="li-signin"><a href="javascript:;" class="setting-tab" ><i class="far fa-user-circle"></i> Jim</a></li>
+						</ul>
+						<ul class="nav navbar-nav"> 
+							<li class="li-signin"><a href="sign-in.html" class=""><i class="far fa-user-circle"></i> Log In</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header> 
+		<div class="e-main mt-86">
+			<div class="e-heading">
+				<h3><strong>Delivery to:</strong> <span><i class="fas fa-map-marker-alt"></i> 77 Charles St WToronto, ON M5S 1K5</span> <a href="javascript:;"><i class="fas fa-chevron-down"></i></a></h3>
+				<div class="filter2904">
+					<div class="sl2904">
+						<label class="pure-material-radio">
+							<input type="radio" name="delivery_sl2904" >
+							<span><i class="far fa-clock"></i> ASAP</span> 
+						</label>
+						<label class="pure-material-radio">
+							<input type="radio" name="delivery_sl2904" checked>
+							<span><i class="far fa-calendar-alt"></i> Pre-order for Later</span> 
+						</label>
+					</div>
+				</div>
+				<div class="pre-day-2920">
+					<div class="Pre-root">
+						<div class="Pre-subtitle1">Select Order Time</div>
+						<div class="jss2081">
+							<div aria-label="Mon" class="jss2082 disable">
+								<div class="jss-subday">Mon</div>
+								<div class="jss-day">27</div>
+							</div>
+							<div aria-label="Tue" class="jss2082 disable">
+								<div class="jss-subday">Tue</div>
+								<div class="jss-day">28</div>
+							</div>
+							<div aria-label="Wed" class="jss2082 day-selected">
+								<div class="jss-subday">Wed</div>
+								<div class="jss-day">29</div>
+							</div> 
+							<div aria-label="Thu" class="jss2082">
+								<div class="jss-subday">Thu</div>
+								<div class="jss-day">30</div>
+							</div>
+							<div aria-label="Fri" class="jss2082">
+								<div class="jss-subday">Fri</div>
+								<div class="jss-day">1</div>
+							</div>
+							<div aria-label="Sat" class="jss2082">
+								<div class="jss-subday">Sat</div>
+								<div class="jss-day">2</div>
+							</div>
+							<div aria-label="Sun" class="jss2082">
+								<div class="jss-subday">Sun</div>
+								<div class="jss-day">3</div>
+							</div>
+						</div>
+						<div class="jss3020">
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>07:00 AM - 07:30 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>07:15 AM - 07:45 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>07:30 AM - 08:00 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>07:45 AM - 08:15 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>08:00 AM - 08:30 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>08:15 AM - 08:45 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>08:30 AM - 09:00 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>08:45 AM - 09:15 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>09:00 AM - 09:30 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>09:15 AM - 09:45 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>09:30 AM - 10:00 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>09:45 AM - 10:15 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>10:00 AM - 10:30 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>10:15 AM - 10:45 AM</span> 
+								</label>
+							</div> 
+							<div class="jss0120">
+								<label class="pure-material-radio">
+									<input type="radio" name="delivery_time" >
+									<span>10:30 AM - 11:00 AM</span> 
+								</label>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div> 
+			<div class="e-container clearfix">
+				<div class="popular-products entry-content">  
+					<div class="rows grid  restaurant-content">    
+						<div class="grid-item">
+							<div class="item-r">
+								<div class="r-header"> 
+									<div class="r-thumbnail"> 
+										<img src="../img/11.webp"> 
+									</div>
+								</div>
+								<div class="r-desc">
+									<div class="r-title-f">Mangia & Bevi</div>
+									<div class="r-adds">260 King St E, Toronto, ON M5A 4L5, Canada</div>
+									<div class="r-reviews">
+										<div class="r-rv">
+											<i class="fas fa-star"></i> 4.5
+										</div>
+										<div class="r-del">
+											<i class="far fa-clock"></i>
+											<span>Next Delivery: 9:00</span>
+										</div>
+									</div>
+								</div> 
+							</div>
+						</div>  
+					</div> 
+				</div> 
+			</div>
+		</div>
+		<section class="parallax-container">
+			<div class="material-parallax parallax">
+				<img src="../img/parallax-4.webp" alt="" style="display: block; transform: translate3d(-50%, 75px, 0px);">
+			</div>
+			<div class="parallax-content section-xxl context-dark text-md-left">
+				<div class="container">
+					<div class="row row-30 justify-content-center align-items-center align-items-md-end">
+						<div class="col-lg-3">
+							<h3 class="text-spacing-100">Stay <span class="font-weight-light">connected</span>
+							</h3>
+							<p>Subscribe to our newsletter</p>
+						</div>
+						<div class="col-lg-9 inset-lg-bottom-10">
+							<!-- RD Mailform-->
+							<form class="rd-form rd-mailform rd-form-inline form-lg rd-form-text-center" method="post" action="" >
+								<div class="form-wrap">
+									<input class="form-input form-control-has-validation" type="email" name="email" placeholder="Enter your email address"> 
+								</div>
+								<div class="form-button">
+									<button class="button-zakaria button-lg button-primary" type="submit">Subscribe</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer-container">
+			<div class="footer-modern-panel text-center">
+				<div class="container">
+					<p class="rights"><span>©&nbsp; </span>2020 Epicater . All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</div> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>   
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script> 
+	<script>
+		$(window).on('load',function() {'use strict';
+			$(".loader").fadeOut("slow");
+		});
+		$('.selectpicker').selectpicker()  
+
+		$('.scrollTo').click(function(){
+			$('html, body').animate({
+				scrollTop: $( $(this).attr('href') ).offset().top
+			}, 500);
+			return false;
+		});
+		$('[data-toggle="tooltip"]').tooltip();
+		$(document).ready(function(){
+
+			$('.show_cart, .fl-shopping').click(function(){
+				$('body').addClass('modal-open');
+				$('.sidenav-overlay').addClass('in');
+				$('.e-cart').addClass('in');
+			});
+			$('.sidenav-overlay, .back-home').click(function(){
+				$('body').removeClass('modal-open');
+				$('.sidenav-overlay').removeClass('in');
+				$('.e-cart').removeClass('in');
+			}); 
+			$('.btn-cart').click(function(){
+				$('body').addClass('modal-open');
+				$('.sidenav-overlay').addClass('in');
+				$('.e-cart').addClass('in');
+				$('.quickview-modal').hide();
+			});
+			$('.quickview').click(function(){  
+				$('body').addClass('modal-open');
+				$('.quickview-modal').show();
+			});
+			$('.mfp-close').click(function(){  
+				$('body').removeClass('modal-open');
+				$('.quickview-modal').hide();
+			});
+
+			$('.more_day').click(function(){
+				$('.custom-dl').slideToggle(); 
+			}); 
+
+			$('.datepicker').datepicker(); 
+ 
+		});
+
+		// $(window).scroll(function(){
+
+		// 	if ($(window).scrollTop() >= 100) {
+		// 		$('.nav-site').addClass('fixed'); 
+		// 	}
+		// 	else {
+		// 		$('.nav-site').removeClass('fixed'); 
+		// 	}
+
+		// });
+
+
+		$( function() {
+			$( "ul.droptrue" ).sortable({
+				connectWith: "ul"
+			}); 
+
+			$( "#sortable1, #sortable2, #sortable3" ).disableSelection();
+		} );
+
+	</script>
+</body>
+</html>
