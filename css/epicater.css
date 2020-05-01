@@ -188,7 +188,7 @@ a, a:hover, a:focus {
 }
 /* ==== Slick slider CSS === */
 .img-fill{
-  width: 100%;
+  /* width: calc(100% - 10px); */
   display: block;
   overflow: hidden;
   position: relative;
@@ -202,6 +202,7 @@ a, a:hover, a:focus {
   display: inline-block;
   max-width: none;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 *,
@@ -320,16 +321,15 @@ nav.navbar {
 }
 
 .slick-slide {
-  float: left /* If RTL Make This Right */ ;
+  float: left /* If RTL Make This Right;  */;
   padding: 0;
 }
 
 /* ==== Slider Style === */
-.Modern-Slider { 
-  margin-top: 76px;
+.Modern-Slider {
 }
 .Modern-Slider .item .img-fill{
-  height: 500px;
+  height: 230px;
 }
 
 .Modern-Slider .item .img-fill .info{
@@ -355,25 +355,26 @@ nav.navbar {
   position:absolute;
   top:50%;
   right:0px;
-  width:45px;
-  height:45px;
-  background:rgba(0,0,0,.50);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.375);
   border:0 none;
   margin-top:-22.5px;
   text-align:center;
-  color:#FFF;
+  color: #fff;
   z-index:5;
   font-size: 20px;
   outline:  none;
+  border-radius: 100px;
 }
 
 .Modern-Slider .PrevArrow{
   position:absolute;
   top:50%;
   left:0px;
-  width:45px;
-  height:45px;
-  background:rgba(0,0,0,.50);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.375);
   border:0 none;
   margin-top:-22.5px;
   text-align:center;
@@ -381,6 +382,7 @@ nav.navbar {
   z-index:5;
   font-size: 20px;
   outline: none;
+  border-radius: 100px;
 }
 
 .Modern-Slider .slick-dots{
@@ -393,6 +395,7 @@ nav.navbar {
   padding:0px;
   margin:0px;
   list-style-type:none;
+  display: none !important;
 }
 .Modern-Slider .slick-dots li button{display:none;}
 .Modern-Slider .slick-dots li{
@@ -446,7 +449,7 @@ nav.navbar {
   animation:Slick-FastSwipeIn 1s both;
 }
 
-.Modern-Slider {background:#000;height: 500px;}
+.Modern-Slider {height: 230px;max-width: 1024px;margin: 0 auto 30px;}
 
 /* ==== Slider Image Transition === */
 @keyframes Slick-FastSwipeIn{
@@ -462,12 +465,12 @@ nav.navbar {
 .slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0;}
 .slick-list:focus{outline:none}.slick-list.dragging{cursor:hand}
 .slick-slider .slick-track,.slick-slider .slick-list{-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
-.slick-track{position:relative;top:0;left:0;display:block}
+.slick-track{position:relative;top:0;left:0;display: flex;justify-content: space-between;}
 .slick-track:before,.slick-track:after{display:table;content:''}.slick-track:after{clear:both}
 .slick-loading .slick-track{visibility:hidden}
-.slick-slide{display:none;float:left /* If RTL Make This Right; */;height:100%;min-height:1px;}
+.slick-slide{display:none;float:left /* If RTL Make This Right;;; */;height:100%;min-height:1px;}
 .slick-slide.dragging img{pointer-events:none}
-.slick-initialized .slick-slide{display:block}
+.slick-initialized .slick-slide{display:block;width: 50% !important;padding-left: 10px;}
 .slick-loading .slick-slide{visibility:hidden}
 .slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
 
@@ -895,21 +898,22 @@ section.e-content {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.restaurant-content .grid-item {
-}
+.restaurant-content .grid-item {display: flex;width: 100%;flex-wrap: wrap;position: relative;justify-content: space-between;}
 .item-r {
   background-color: rgb(255, 255, 255);
   cursor: pointer;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
   transition: box-shadow 200ms ease-in-out 0s;
   border-width: 1px;
   border-style: solid;
   border: 0;
   border-image: initial;
-  border-radius: 4px;
+  border-radius: 6px;
   position: relative;
+  display: flex;
+  padding: 5px;
 }
 
 .r-header {
@@ -917,22 +921,58 @@ section.e-content {
   opacity: 1;
   justify-content: space-between;
   position: relative;
+  width: 300px;
 }
 
 .r-thumbnail {
   position: relative;
   margin: 0;
   width: 100%;
-  height: 330px;
+  height: 150px;
 }
 .r-thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 6px;
 }
 .r-desc {
   position: relative;
-  padding: 8px 16px;
+  padding: 15px 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-right: 1px solid #eee;
+  width: 40%;
+}
+.r-logo-business {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid #e1e5e8;
+    border-image: initial;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.r-logo-business img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.styles__RestaurantInfoDiv {
+    width: calc(60% - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
 }
 .r-desc.center {
     text-align: center;
@@ -955,20 +995,30 @@ section.e-content {
 }
 
 .r-adds {
-  font-size: 13px;
+  font-size: 14px;
   color: #777;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .r-reviews {
   display: flex;
   justify-content: space-between;
   position: relative;
-  flex: 1;
+  width: 100%;
+  align-items: center;
 }
 
 .r-rv {
-  color: #777;
+  color: #fff;
+  background: #f93;
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .r-rv i {
@@ -983,8 +1033,12 @@ section.e-content {
 }
 
 .r-del {
-  font-size: 13px;
+  font-size: 14px;
   color: #777;
+}
+.r-del span {
+    display: block;
+    margin-bottom: 10px;
 }
 .is-sticky {
   position: sticky;
