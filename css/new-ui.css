@@ -70,6 +70,7 @@
 
 .nav-site.fixed .logo-color {
     display: flex;
+    align-items: center;
 }
 .title-heading {
     background: #ffffff;
