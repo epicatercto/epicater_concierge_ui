@@ -66,6 +66,7 @@
 }
 .nav-site .logo-color, .nav-site.fixed .logo-w {
     display: none;
+    align-items: center;
 }
 
 .nav-site.fixed .logo-color {

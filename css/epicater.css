@@ -2030,6 +2030,7 @@ input[type='radio'] {
   color: #777;
   letter-spacing: .5px;
   border-bottom: 1px solid #eee;
+  flex-direction: row;
 }
 
 .i-datetime i {
@@ -3206,6 +3207,7 @@ button.button.btn-cart {}
 .o-total {
     padding: 15px 0;
     font-weight: 600;
+    flex-direction: row;
 }
 
 .o-button {

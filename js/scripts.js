@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		var js_file = document.createElement('script');
 		js_file.type = 'text/javascript';
-		js_file.src = 'https://maps.googleapis.com/maps/api/js?callback=initMap&signed_in=true&language=' + lang;
+		js_file.src = 'https://maps.googleapis.com/maps/api/js?key=&callback=initMap&signed_in=true&language=' + lang;
 		document.getElementsByTagName('head')[0].appendChild(js_file);
 	}
 });
@@ -105,7 +105,7 @@ var map;
 function initMap()
 {
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 43.6677507, lng: -79.3925033 },
+		center: {lat: 43.6678574, lng: -79.3906305 },
 		zoom: 8
 	});
 
