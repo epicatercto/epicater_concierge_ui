@@ -1058,7 +1058,7 @@ section.e-content {
   flex-direction: column;
   margin: 0px auto;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   padding: 15px 25px;
   background: #fff;
 }
@@ -1119,6 +1119,12 @@ section.e-content {
   position: absolute;
   right: 0;
   top: 5px;
+}
+.e-heading h3 .show-location.op i {
+  
+transform: rotate(180deg);
+  
+transition: .3s;
 }
 .e-store-container {
   position: relative;
@@ -1426,7 +1432,7 @@ section.e-content {
 
 .d-total {
   font-weight: 600;
-  color: #000;
+  /* color: #000; */
 }
 
 .d-checkout {
@@ -1449,7 +1455,10 @@ section.e-content {
   padding: 0 5px;
   font-size: 12px;
   font-weight: bold;
-  color: #f93 !important;
+  color: #a5a5a5 !important;
+}
+.delivery_form.active .del_delivery {
+    color: #f93 !important;
 }
 .delivery_form {
   position: relative;
@@ -1461,6 +1470,7 @@ section.e-content {
     align-items: center;
     position: relative;
     width: 100%;
+    flex-direction: column;
 }
 
 .sp-bw .bootstrap-select.form-control {
@@ -1500,7 +1510,8 @@ legend {
   color: #f93;
 }
 .form-group.mg-10 {
-  margin: 10px 0;
+  margin: 0 0 10px;
+  align-items: flex-start;
 }
 
 .form-group.mg-10 label {
@@ -1902,8 +1913,8 @@ input[type='radio'] {
   display: block;
   margin: 10px 0;
   padding: 10px;
-  background: #ffecda;
-  border: 1px solid #ffecda;
+  /* background: #ffecda; */
+  /* border: 1px solid #ffecda; */
   border-radius: 2px;
 }
 
@@ -2038,10 +2049,11 @@ input[type='radio'] {
 .sidebar-container {
   position: relative;
   height: 100vh;
+  overflow: auto;
 }
 .sidebar-inner {
   position: relative;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2055,6 +2067,7 @@ input[type='radio'] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
 }
 .homepage-header-background::before {
   content: "";
@@ -2078,10 +2091,10 @@ input[type='radio'] {
   overflow: hidden;
 }
 .static-header.homepage-header {
-  padding: 250px 0 100px;
+  /* padding: 250px 0 100px; */
 }
 .static-header .container h1 {
-  font-size: 42px;
+  font-size: 53px;
   color: #ffffff;
   margin: 0 0 15px;
   font-weight: bolder;
@@ -2095,7 +2108,8 @@ input[type='radio'] {
 }
 .static-header .container .azqf-query-form .wrapper {
   display: flex;
-  width: 730px;
+  width: 85%;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -2109,7 +2123,7 @@ input[type='radio'] {
 }
 
 .geo-location {
-  width: 70%;
+  width: 100%;
 }
 .location {
   position: relative;
@@ -2118,13 +2132,14 @@ input[type='radio'] {
 .location i {
   z-index: 1;
   position: absolute;
-  top: 17px;
-  left: 10px;
-  color: #b7b7b7;
-  font-size: 18px;
+  top: 20px;
+  left: 20px;
+  color: #000000;
+  font-size: 25px;
 }
 .submit {
-  width: calc(30% - 10px);
+  width: 100%;
+  margin-top: 5px;
 }
 .static-header .container .azqf-query-form .wrapper input[type="text"] {
   line-height: 55px;
@@ -2141,30 +2156,33 @@ input[type='radio'] {
 .static-header .container .azqf-query-form .wrapper .submit button {
   background-color: #f93;
   width: 100%;
-  height: 55px;
-  line-height: 55px;
+  height: 60px;
+  line-height: 60px;
   border: none;
   display: block;
   padding: 0;
   border-radius: 3px;
   color: #ffffff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .location .bootstrap-select>.dropdown-toggle {
   z-index: 1;
   padding-left: 40px;
-  line-height: 55px;
-  height: 55px;
-  padding: 0 30px 0 40px;
+  line-height: 65px;
+  height: 65px;
+  padding: 0 30px 0 60px;
   border: none;
-  background-color: #f2f1f3;
+  background-color: #ffffff;
   border-radius: 3px;
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
   color: #000;
   outline: none;
+  box-shadow: none;
 }
 .bootstrap-select .dropdown-menu {
   min-width: 100%;
@@ -2246,10 +2264,10 @@ input[type='radio'] {
 .cart-site {
   position: fixed;
   top: 0;
-  right: -350px;
+  right: -400px;
   bottom: 0;
   height: auto;
-  width: 350px;
+  width: 400px;
   transition: .5s;
 }
 .sidenav-overlay {
@@ -2696,7 +2714,7 @@ input[type='radio'] {
   position: fixed;
   outline: none!important;
   -webkit-backface-visibility: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   display: none;
   overflow: auto;
 }
@@ -2711,22 +2729,39 @@ input[type='radio'] {
 
 .quickview-content {
   width: 100%;
-  max-width: 1000px;
+  max-width: 600px;
   margin: 0 auto;
-  background-color: #fff;
   position: relative;
   padding: 0;
   display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  bottom: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0px -2px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.quickview-header {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
+.quickview-body {
+    position: relative;
+    overflow: auto;
+    max-height: 80vh;
+    border-radius: 8px 8px 0 0;
+}
 .details-thumb {
-  width: 60%;
+  width: 100%;
   padding: 0;
 }
 
 .details-infor {
-  width: 40%;
-  padding: 40px 15px 0 30px;
+  width: 100%;
+  padding: 20px 15px 0 30px;
 }
 
 .details-item {
@@ -2736,24 +2771,23 @@ input[type='radio'] {
 
 .details-item img {
   width: 100%;
-  height: 550px;
+  height: 350px;
   object-fit: cover;
 }
 
 .details-infor h1.product-title {
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   color: #333;
   margin-bottom: 10px;
-  margin-top: -5px;
 }
 
 .details-infor .location-pr {
   text-transform: capitalize;
   font-size: 14px;
-  color: #555555;
+  color: #8c8c8c;
   margin-bottom: 10px;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .details-infor .dietary_preferences {
@@ -2761,6 +2795,15 @@ input[type='radio'] {
   border-top: 1px solid #ccc;
   margin-top: 15px;
   padding-top: 10px;
+  margin-bottom: 15px;
+}
+.details-infor .dietary_preferences textarea {
+    box-shadow: none;
+    background: #f2f3f5;
+    border: 0;
+    min-height: 70px;
+    resize: none;
+    padding: 10px;
 }
 .add-to-box {
   padding: 20px 0px;
@@ -2775,16 +2818,19 @@ input[type='radio'] {
   border: 1px #ececec solid;
   color: #999;
   transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
-  font-size: 13px;
+  font-size: 10px;
   padding: 0;
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
   margin: 4px;
   outline: none;
   text-align: center;
-  line-height: 40px;
+  line-height: 26px;
   text-align: center;
   display: inline-block;
+  border-radius: 100%;
+  outline: none;
+  margin: 0 15px;
 }
 .add-to-cart .qty, .qty-holder .qty {
   background-color: #FFFFFF;
@@ -2805,12 +2851,16 @@ input[type='radio'] {
 .add-to-cart {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-
+.quickview-footer {
+    height: 60px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+}
 .btn-cart {
-  height: 40px;
-  width: calc(100% - 150px);
+  height: 60px;
+  width: 100%;
   border: 0;
   background: #f93;
   color: #fff;
@@ -2818,23 +2868,28 @@ input[type='radio'] {
   font-weight: bold;
   transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
   text-transform: uppercase;
+  border-radius: 0 0 8px 8px;
 }
+
+button.button.btn-cart {}
 .mfp-close {
+  z-index: 1;
   width: 30px;
   height: 30px;
   border-radius: 50px;
   text-align: center;
   line-height: 28px;
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: 15px;
+  left: 10px;
   opacity: 1;
   outline: none;
-  background: #ff9933;
+  background: transparent;
   color: #fff;
   border: 0;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 300;
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.6));
 }
 .quickview-content .d_p-item {
   width: 100%;
@@ -3168,4 +3223,15 @@ input[type='radio'] {
     text-align: center;
     line-height: 40px;
     letter-spacing: .5px;
+}
+.jss1479 {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.MuiTypography-h6 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0;
 }
