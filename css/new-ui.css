@@ -345,3 +345,31 @@
     height: 400px;
     border-radius: 4px;
 }
+.product-price-gr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.lahawru span {
+    display: inline-flex;
+    color: #f93;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.jsxdh span {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+}
+.details-infor .r-tags {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.details-infor .r-tags .tag {
+    background: #a2a2a2;
+}
