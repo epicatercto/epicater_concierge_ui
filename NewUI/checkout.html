@@ -8,21 +8,107 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
 	<title>Epicater</title>
 
 	<!-- Custom fonts for this template-->
-	<link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700&display=swap" rel="stylesheet">
-
+	<link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
 	<!-- Custom styles for this template-->
 	<link href="../css/bootstrap.min.css" rel="stylesheet">  
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
 	<link href="../css/all.css" rel="stylesheet">
 	<link href="../css/epicater.css" rel="stylesheet">
 	<link href="../css/new-ui.css" rel="stylesheet">
 
 </head>
 <body>  
+	<div class="modal-j selectPayment-modal">
+		<div class="selectPayment-content"> 
+			<div class="electPayment-header">
+				<button title="Close (Esc)" type="button" class="mfp-close close-PaymentModal">&times;</button>
+				<h6>Select Payment Method</h6>
+			</div>
+			<div class="selectPayment-body">
+				<div class="form-Payment">
+					<div class="c110">
+						<input type="text" class="e-input" placeholder="Credit Card Number">
+						<div class="kajs">Enter a VISA, Mastercard, or American Express card number</div>
+					</div>
+					<div class="c111">
+						<div class="c112">
+							<select class="form-control selectpicker" id="role" > 
+								<option value="Month">Month</option>
+								<option value="JAN">01</option>
+								<option value="FEB">02</option> 
+								<option value="MAR">03</option>
+								<option value="APR">04</option>
+								<option value="MAY">05</option>
+								<option value="JUNE">06</option>
+								<option value="JULY">07</option>
+								<option value="AUG">08</option>
+								<option value="SEPT">09</option>
+								<option value="OCT">10</option>
+								<option value="NOV">11</option>
+								<option value="DEC">12</option>
+							</select>
+						</div>
+						<div class="c112">
+							<select class="form-control selectpicker" id="role" > 
+								<option value="Month">Year</option>
+								<option value="2020">2020</option> 
+								<option value="2021">2021</option> 
+								<option value="2022">2022</option> 
+								<option value="2023">2023</option> 
+								<option value="2024">2024</option> 
+								<option value="2025">2025</option> 
+								<option value="2026">2026</option> 
+								<option value="2027">2027</option> 
+								<option value="2028">2028</option> 
+								<option value="2029">2029</option> 
+								<option value="2030">2030</option> 
+								<option value="2031">2031</option> 
+								<option value="2032">2032</option> 
+								<option value="2033">2033</option> 
+							</select>
+						</div>
+						<div class="c112">
+							<input type="text" placeholder="CVV"> 
+							<a href="javascript:;" data-toggle="tooltip" title="3-4 digit number typically on the back of your card" class="gy"><i class="fas fa-question-circle"></i></a>
+						</div>
+					</div>
+					<div class="c113">
+						<label class="pure-material-checkbox">
+							<input type="checkbox" name="group">
+							<span>Save credit card for future use</span> 
+						</label>
+					</div>
+				</div>
+			</div> 
+			<div class="selectPayment-footer">
+				<button>Confirm</button>
+			</div>
+		</div> 
+	</div>
+	<div class="modal-j voucherModal">
+		<div class="selectPayment-content"> 
+			<div class="electPayment-header">
+				<button title="Close (Esc)" type="button" class="mfp-close close-voucherModal">&times;</button>
+				<h6>Add Voucher</h6>
+			</div>
+			<div class="selectPayment-body">
+				<div class="form-Payment">
+					<div class="c110">
+						<input type="text" class="e-input" placeholder="Voucher Code"> 
+					</div>  
+				</div>
+			</div> 
+			<div class="selectPayment-footer">
+				<button>Redeem</button>
+			</div>
+		</div> 
+	</div>
+	<div id="sidenav-overlay" class="sidenav-overlay"></div>
 	<div class="wrapper-container">
 		<header class="site-header clearfix">
 			<nav class="navbar nav-site fixed">
@@ -47,93 +133,123 @@
 			</nav>
 		</header>
 		<div class="e-checkout">
-			<div class="checkout-panel">
-				<div class="panel-body">
-					<div class="form-group">
-						<h2 class="title">Checkout</h2> 
-
-						<div class="payment-method">
-							<label for="card" class="method card">
-								<div class="card-logos">
-									<img src="../img/visa_logo.png"/>
-									<img src="../img/mastercard_logo.png"/>
-								</div>
-
-								<div class="radio-input">
-									<input id="card" type="radio" name="payment">
-									Pay $49.00 with credit card
-								</div>
-							</label>
-
-							<label for="paypal" class="method paypal">
-								<img src="../img/paypal_logo.png"/>
-								<div class="radio-input">
-									<input id="paypal" type="radio" name="payment">
-									Pay $49.00 with PayPal
-								</div>
-							</label>
-						</div>
-
-						<div class="input-fields">
-							<div class="column-1">
-								<label for="cardholder">Cardholder's Name</label>
-								<input type="text" id="cardholder" />
-
-								<div class="small-inputs">
-									<div>
-										<label for="date">Expiry Date</label>
-										<input type="text" id="date" placeholder="MM / YY" />
-									</div>
-
-									<div>
-										<label for="verification">CVV / CVC *</label>
-										<input type="password" id="verification"/>
-									</div>
-								</div>
-
-							</div>
-							<div class="column-2">
-								<label for="cardnumber">Card Number</label>
-								<input type="password" id="cardnumber"/>
-
-								<span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
-							</div>
-						</div>
-					</div>
-					<div class="form-group"> 
-						<div class="input-fields">
-							<div class="column-1">
-								<div class="form-group"> 
-									<label for="address_1">Address Delivery</label>
-									<input type="text" id="address_1" />  
-								</div>
-								<div class="form-group">
-									<label>Message</label>
-									<textarea id="note" placeholder="Note..."></textarea>
-								</div>
-							</div> 
-							<div class="column-2">
-								<label for="reimbursement_code">Reimbursement Code</label>
-								<input type="text" id="reimbursement_code"/> 
-							</div>
-						</div> 
-					</div> 
-				</div>
-				
-				<div class="panel-footer">
-					<a href="restaurant_detail.html" class="btn back-btn btn-default">Back</a >
-					<button class="btn next-btn btn-warning trigger-btn" data-toggle="modal" data-target="#modalCheckout">Place Order</button> 
-				</div>
-			</div>
+ 			<div class="jahdkja">
+ 				<div class="kjdgkj">
+ 					<div class="p-header">
+ 						<h6 class="MuiTypography-h6">Your Delivery</h6>
+ 						<a href="home.html">Back to menu</a>
+ 					</div>
+ 					<div class="p-body">
+ 						<div class="c103">
+ 							<div class="c104">
+ 								<i class="far fa-clock"></i>
+ 								<span>May 7 11:30 PM - 12:00 AM</span>
+ 							</div>
+ 							<div class="c104">
+ 								<i class="fas fa-map-marked-alt"></i>
+ 								<span>77 Charles St WToronto, ON M5S 1K5</span>
+ 							</div>
+ 						</div>
+ 						<div class="c105">
+ 							<p class="c106">Where should your courier leave your order?</p>
+ 							<div class="c107">We are reducing person-to-person contact with Contactless Delivery. Your courier will leave your order at a location of your choice.</div>
+ 						</div>
+ 						<div class="c108">
+ 							<textarea placeholder="Contactless Delivery Instructions"></textarea>
+ 						</div>
+ 						<div class="c109">e.g. Apartment/Suite Number, Building Name, etc</div>
+ 					</div>
+ 				</div>
+ 				<div class="mapCheckout">
+ 					<div id="map"></div>
+ 				</div>
+ 				<div class="checkout-panel">
+ 					<div class="checkout-header">
+ 						<h6 class="MuiTypography-h6">Checkout</h6>
+ 					</div>
+ 					<div class="checkout-body">
+ 						<div class="tjhakjfs">
+ 							<div class="klaj">Tip Your Courier</div>
+ 							<div class="akjhdkj">
+ 								<div class="skdka">
+ 									<div class="kjks">
+ 										<span>$2.00</span>
+ 									</div>
+ 									<div class="kjks selected">
+ 										<span>$3.00</span>
+ 									</div>
+ 									<div class="kjks">
+ 										<span>$4.00</span>
+ 									</div>
+ 								</div>
+ 								<div class="jjska">
+ 									<input type="text" name="" value="$3.00">
+ 									<div class="d-item">
+ 										<span>&times;</span>
+ 									</div>
+ 								</div>
+ 							</div>
+ 							<div class="wwjj">We never take a cut. 100% of your tip goes to your courier.</div>
+ 						</div>
+ 						<div class="slPayment">
+ 							<div class="pappt">
+ 								<i class="fas fa-credit-card"></i>
+ 								<span>Select payment method</span>
+ 								<a href="javascript:;" class="addPaymentMethod">+</a>
+ 							</div>
+ 						</div>
+ 						<div class="adVoucher">
+ 							<div class="pappt">
+ 								<i class="fas fa-receipt"></i>
+ 								<span>Add Voucher</span>
+ 								<a href="javascript:;" class="addVoucher">+</a>
+ 							</div>
+ 						</div>
+ 						<div  class="c51868">
+ 							<h3 class="MuiTypography-subtitle1">Burger King</h3>
+ 						</div>
+ 						<div class="qwmsuew">
+ 							<div class="sklksa">
+ 								<div class="title-c1210">1. Avocado Tofu Ahimi Large</div>
+ 								<div class="price-c2821">$12.60</div>
+ 							</div>
+ 							<div class="sklksa">
+ 								<div class="title-c1210">2. Avocado Tofu Ahimi Large</div>
+ 								<div class="price-c2821">$12.60</div>
+ 							</div>
+ 						</div>
+ 						<div class="jskjas21">
+ 							<div class="c101">
+ 								<span>Subtotal</span>
+ 								<span>$25.20</span>
+ 							</div>
+ 							<div class="c101">
+ 								<span>Delivery Fee</span>
+ 								<span>$2.99</span>
+ 							</div>
+ 							<div class="c101">
+ 								<span>HTS</span>
+ 								<span>$1.82</span>
+ 							</div>
+ 							<div class="c101">
+ 								<span>Courier Tip</span>
+ 								<span>$3.00</span>
+ 							</div>
+ 						</div>
+ 					</div>
+ 					<div class="checkout-footer">
+ 						<div class="c102">
+ 							<span>Total</span>
+ 							<span>$33.01</span>
+ 						</div>
+ 						<div class="button-checkout">
+ 							<button>Place Order</button>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
 		</div>
-	</div>
-	<footer class="footer-container">
-		<div class="footer-modern-panel text-center">
-			<div class="container">
-				<p class="rights"><span>©&nbsp; </span>2020 Epicater . All rights reserved.</p>
-			</div>
-		</div>
-	</footer>
+	</div> 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -141,6 +257,8 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>   
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script> 
 	<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
-	<script src="../js/scripts.js"></script> 
+	<script src="../js/scripts.js"></script>   
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhzsCe8wCvZG6kuJJQQpZ0jXg2VMwVhrs&callback=initMap"
+    async defer></script>
 </body>
 </html>

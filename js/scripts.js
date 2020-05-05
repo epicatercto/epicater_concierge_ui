@@ -1,14 +1,5 @@
 $('[data-toggle="tooltip"]').tooltip();
-$(document).ready(function() {
-	$('.filter2904 input[type="radio"]').click(function() {
-		if($(this).attr('id') == 'preOrderLate') {
-			$('.pre-day-2920').show();           
-		}
-		else {
-			$('.pre-day-2920').hide();   
-		}
-	});
-});
+ 
 $(window).on('load',function() {'use strict';
 	$(".loader").fadeOut("slow");
 });
@@ -45,7 +36,7 @@ $(document).ready(function(){
 	});
 	$('.mfp-close').click(function(){  
 		$('body').removeClass('modal-open');
-		$('.quickview-modal').hide();
+		$('.quickview-modal').hide(); 
 	});
 
 	$('.more_day').click(function(){
@@ -64,6 +55,26 @@ $(document).ready(function(){
 		$('.jhkshasMap').slideToggle();
 	}); 
 
+	$('.addPaymentMethod').click(function(){
+		$('body').addClass('modal-open');
+		$('.sidenav-overlay').addClass('in');
+		$('.selectPayment-modal').addClass('in');
+	}); 
+	$('.close-PaymentModal').click(function(){  
+		$('body').removeClass('modal-open'); 
+		$('.sidenav-overlay').removeClass('in');
+		$('.selectPayment-modal').removeClass('in');
+	});
+	$('.addVoucher').click(function(){
+		$('body').addClass('modal-open');
+		$('.sidenav-overlay').addClass('in');
+		$('.voucherModal').addClass('in');
+	}); 
+	$('.close-voucherModal').click(function(){  
+		$('body').removeClass('modal-open'); 
+		$('.sidenav-overlay').removeClass('in');
+		$('.voucherModal').removeClass('in');
+	});
 	$('.datepicker').datepicker(); 
 
 });
@@ -83,58 +94,236 @@ $(".Modern-Slider").slick({
 	nextArrow:'<button class="NextArrow fas fa-arrow-right"></button>', 
 }); 
 
+function initMap() {
+	var uluru = {lat: 43.6678574, lng: -79.3906305 }; 
+	var map = new google.maps.Map(
+		document.getElementById('map'), {
+			zoom: 17, 
+			center: uluru,
+			mapTypeControlOptions: {
+				mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+				'styled_map']
+			}
+		}); 
+	var marker = new google.maps.Marker({position: uluru, map: map});  
+	var styledMapType = new google.maps.StyledMapType(
+		[
+		{
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#ebe3cd"
+			}
+			]
+		},
+		{
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#523735"
+			}
+			]
+		},
+		{
+			"elementType": "labels.text.stroke",
+			"stylers": [
+			{
+				"color": "#f5f1e6"
+			}
+			]
+		},
+		{
+			"featureType": "administrative",
+			"elementType": "geometry.stroke",
+			"stylers": [
+			{
+				"color": "#c9b2a6"
+			}
+			]
+		},
+		{
+			"featureType": "administrative.land_parcel",
+			"elementType": "geometry.stroke",
+			"stylers": [
+			{
+				"color": "#dcd2be"
+			}
+			]
+		},
+		{
+			"featureType": "administrative.land_parcel",
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#ae9e90"
+			}
+			]
+		},
+		{
+			"featureType": "landscape.natural",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#dfd2ae"
+			}
+			]
+		},
+		{
+			"featureType": "poi",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#dfd2ae"
+			}
+			]
+		},
+		{
+			"featureType": "poi",
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#93817c"
+			}
+			]
+		},
+		{
+			"featureType": "poi.park",
+			"elementType": "geometry.fill",
+			"stylers": [
+			{
+				"color": "#a5b076"
+			}
+			]
+		},
+		{
+			"featureType": "poi.park",
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#447530"
+			}
+			]
+		},
+		{
+			"featureType": "road",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#f5f1e6"
+			}
+			]
+		},
+		{
+			"featureType": "road.arterial",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#fdfcf8"
+			}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#f8c967"
+			}
+			]
+		},
+		{
+			"featureType": "road.highway",
+			"elementType": "geometry.stroke",
+			"stylers": [
+			{
+				"color": "#e9bc62"
+			}
+			]
+		},
+		{
+			"featureType": "road.highway.controlled_access",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#e98d58"
+			}
+			]
+		},
+		{
+			"featureType": "road.highway.controlled_access",
+			"elementType": "geometry.stroke",
+			"stylers": [
+			{
+				"color": "#db8555"
+			}
+			]
+		},
+		{
+			"featureType": "road.local",
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#806b63"
+			}
+			]
+		},
+		{
+			"featureType": "transit.line",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#dfd2ae"
+			}
+			]
+		},
+		{
+			"featureType": "transit.line",
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#8f7d77"
+			}
+			]
+		},
+		{
+			"featureType": "transit.line",
+			"elementType": "labels.text.stroke",
+			"stylers": [
+			{
+				"color": "#ebe3cd"
+			}
+			]
+		},
+		{
+			"featureType": "transit.station",
+			"elementType": "geometry",
+			"stylers": [
+			{
+				"color": "#dfd2ae"
+			}
+			]
+		},
+		{
+			"featureType": "water",
+			"elementType": "geometry.fill",
+			"stylers": [
+			{
+				"color": "#b9d3c2"
+			}
+			]
+		},
+		{
+			"featureType": "water",
+			"elementType": "labels.text.fill",
+			"stylers": [
+			{
+				"color": "#92998d"
+			}
+			]
+		}
+		],
+		{name: 'Styled Map'});
+	map.mapTypes.set('styled_map', styledMapType);
+	map.setMapTypeId('styled_map');
 
-
-document.addEventListener('DOMContentLoaded', function () {
-	if (document.querySelectorAll('#map').length > 0)
-	{
-		if (document.querySelector('html').lang)
-			lang = document.querySelector('html').lang;
-		else
-			lang = 'en';
-
-		var js_file = document.createElement('script');
-		js_file.type = 'text/javascript';
-		js_file.src = 'https://maps.googleapis.com/maps/api/js?key=&callback=initMap&signed_in=true&language=' + lang;
-		document.getElementsByTagName('head')[0].appendChild(js_file);
-	}
-});
-
-var map;
-
-function initMap()
-{
-	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 43.6678574, lng: -79.3906305 },
-		zoom: 8
-	});
-
-	fetch('https://raw.githubusercontent.com/jayshields/google-maps-api-template/master/markers.json')
-	.then(function(response){return response.json()})
-	.then(plotMarkers);
-}
-
-var markers;
-var bounds;
-
-function plotMarkers(m)
-{
-	markers = [];
-	bounds = new google.maps.LatLngBounds();
-
-	m.forEach(function (marker) {
-		var position = new google.maps.LatLng(marker.lat, marker.lng);
-
-		markers.push(
-			new google.maps.Marker({
-				position: position,
-				map: map,
-				animation: google.maps.Animation.DROP
-			})
-			);
-
-		bounds.extend(position);
-	});
-
-	map.fitBounds(bounds);
-}
+} 

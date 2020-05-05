@@ -1,5 +1,5 @@
 body {
- font-family: 'Montserrat', sans-serif; 
+ font-family: 'Montserrat', sans-serif;
 }
 a, a:hover, a:focus {
   text-decoration: none;
@@ -1643,15 +1643,19 @@ legend {
 .e-checkout {
   position: relative;
   background: #f7f7f7;
-  padding-top: 75px;
-  padding-bottom: 100px;
+  padding-top: 87px;
 }
 .checkout-panel {
   display: flex;
   flex-direction: column;
-  width: 940px;
-  height: 766px;
-  margin: 50px auto 0;
+  width: 400px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 8px 0px, rgba(0, 0, 0, 0.12) 0px 8px 8px 0px;
+  border-radius: 8px;
+  z-index: 20;
 }
 .panel-body {
   padding: 45px 80px 0;
@@ -3226,12 +3230,24 @@ button.button.btn-cart {}
 }
 .jss1479 {
     display: block;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
 }
 
 .MuiTypography-h6 {
-    font-size: 22px;
+    display: flex;
+    font-size: 18px;
     font-weight: 600;
     line-height: 28px;
     letter-spacing: 0;
+    align-items: center;
+}
+.MuiTypography-h6 span img {
+    width: 35px;
+    height: 35px;
+    object-fit:contain;
+    border-radius: 4px;
+}
+
+.MuiTypography-h6 span {
+    margin-right: 15px;
 }
