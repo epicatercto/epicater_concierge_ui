@@ -108,15 +108,18 @@
 .filter2904 {
     display: block;
     position: relative;
-    /* margin-top: 15px; */
-    padding-top: 15px;
-    /* border-top: 1px solid #f2f4f5; */
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 6px;
+    margin-bottom: 3rem;
 }
 
 .sl2904 {
     display: block;
     position: relative;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     /* padding-bottom: 10px; */
     /* border-bottom: 1px solid #f2f4f5; */
 }
@@ -128,21 +131,21 @@
 .sl2904 label span i {margin-right: 5px;margin-left: 5px;font-size: 18px;}
 .pre-day-2920 {
     position: relative;
-    border-bottom: 1px solid #f2f3f5;
-    padding-bottom: 15px; 
+    /* border-bottom: 1px solid #f2f3f5; */
+    /* padding-bottom: 15px; */
 } 
 
 .Pre-subtitle1 {
     font-weight: 600;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
 .jss2081 {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
     /* border-bottom: 1px solid #f2f4f5; */
     /* margin-bottom: 15px; */
 }
@@ -159,6 +162,7 @@
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .jss-subday {
@@ -348,7 +352,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 .lahawru span {
@@ -365,7 +369,7 @@
 }
 .details-infor .r-tags {
     margin-bottom: 15px;
-    padding-bottom: 15px;
+    padding: 0 20px 15px;
     border-bottom: 1px solid #eee;
 }
 
@@ -863,7 +867,7 @@
     height: 100vh;
 }
 
-.grid {
+#home-intro .grid {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -892,11 +896,13 @@
 }
 
 .intro-data.odd {
-    background: #fff8e1;
+    background: url(../img/Residential.jpg) center no-repeat;
+    background-size: cover;
 }
 
 .intro-data.even {
-    background: #fff5d5;
+    background: url(../img/Corporation.jpg) left center no-repeat;
+    background-size: cover;
 }
 
 .intro-data a {
@@ -917,4 +923,30 @@
 .intro-data a:hover {
     background: #f93;
     color: #fff;
+}
+.boxesPrice {
+    position: relative;
+}
+
+.boxesPrice-title {
+    padding: 20px;
+    position: relative;
+    color: #777;
+    font-size: 14px;
+    background: #eee;
+}
+
+.jss48 {
+    background: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.boxesPrice-title .subTitle {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
 }

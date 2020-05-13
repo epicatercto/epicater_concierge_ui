@@ -2765,7 +2765,7 @@ input[type='radio'] {
 
 .details-infor {
   width: 100%;
-  padding: 20px 15px 0 30px;
+  padding: 20px 1px 30px;
 }
 
 .details-item {
@@ -2784,6 +2784,8 @@ input[type='radio'] {
   font-weight: 600;
   color: #333;
   margin-bottom: 10px;
+  padding: 0 20px;
+  margin-top: 10px;
 }
 
 .details-infor .location-pr {
@@ -2792,14 +2794,12 @@ input[type='radio'] {
   color: #8c8c8c;
   margin-bottom: 10px;
   /* font-style: italic; */
+  padding: 0 20px;
 }
 
 .details-infor .dietary_preferences {
-  padding: 0;
+  padding: 20px;
   border-top: 1px solid #eee;
-  margin-top: 15px;
-  padding-top: 10px;
-  margin-bottom: 15px;
 }
 .details-infor .dietary_preferences textarea {
     box-shadow: none;
