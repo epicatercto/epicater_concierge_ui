@@ -348,329 +348,103 @@
 			</nav>
 		</header>
 		<div class="e-main" style="padding-top: 0;">  
-			<div class="title-heading e-orders mb-50">
-				<h1>Order History</h1>
+			<div class="title-heading e-orders" style="border:0">
+				<h1>Account Settings</h1> 
 			</div>
-			<div class="e-container clearfix">
-				<div class="d-fl-group" style="flex-direction: row">
-					<div class="e-categories-title f-regular">Past Orders</div>
-					<div class="s-orders">
-						<input type="text" placeholder="Search Orders" class="form-control f-input">
-						<i class="fas fa-search"></i>
+			<div class="eTabs">
+				<ul>
+					<li class="active">
+						<a href="#myAccount" data-toggle="tab">My Account</a>
+					</li>
+					<li>
+						<a href="#tabPassword" data-toggle="tab">Password</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab-content clearfix">
+				<div class="tab-pane active" id="myAccount">
+					<div class="styles_AcST">
+						<div class="styles__Wrapper jkrMbh">
+							<div class="gird c521">
+								<div class="c522">
+									<h4>Edit Account Information</h4>
+								</div>
+								<div class="c523">
+									<label>Full Name <span>*</span></label>
+									<input type="text" name="" class="e-input" value="Jim">
+								</div>
+								<div class="c523">
+									<label>Phone Number <span>*</span></label>
+									<input type="text" name="" class="e-input" value="(+84) 37-4466-344">
+								</div>
+								<div class="c523">
+									<label>Email <span>*</span></label>
+									<input type="text" name="" class="e-input" value="hoanganh94cit@gmail.com">
+								</div>
+								<div class="c523">
+									<label>Address <span>*</span></label>
+									<input type="text" name="" class="e-input" value="666 Ngô Quyền, Đà Nẵng">
+								</div>
+								<div class="c523">
+									<label>Delivery Instructions <span>*</span></label>
+									<input type="text" name="" class="e-input" value="">
+								</div>
+								<div class="c523">
+									<button class="c523-Bt">Save</button>
+								</div>
+							</div>
+						</div>
+						<div class="styles__Wrapper cPzXrn">
+							<div class="gird c521">
+								<div class="c522">
+									<h4>Dietary Restrictions</h4>
+									<textarea class="e-textarea"></textarea>
+								</div>
+								<div class="c522">
+									<h4>Credit Card on File</h4>
+									<div class="c524">
+										<div class="c525">
+											<input type="text" name="" class="e-input" placeholder="Card Number">
+										</div>
+										<div class="c525-2">
+											<input type="text" name="" class="e-input" placeholder="Expiry">
+										</div>
+										<div class="c525-2">
+											<input type="text" name="" class="e-input" placeholder="CVV">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gird c521">
+								<div class="c526">
+									<div class="c526-2">
+										<img src="../img/iconOrders.png">
+									</div>
+									<div class="c527">
+										<span>Your Orders</span>
+										<a href="#">View Past Order <i class="fas fa-arrow-right"></i></a>
+									</div>
+								</div> 
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="eFilterDate_Row">
-					<div class="e-DateOrdered"><span>Thur, 21/05/2020</span> <a href="#">View Receipt</a></div>
-					<div class="e-ordered"> 
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
+				<div class="tab-pane" id="tabPassword">
+					<div class="styles_AcST"> 
+						<div class="styles__Wrapper cPzXrn" style="margin: 0">
+							<div class="gird c521">
+								<div class="c522" style="text-align: center;">
+									<h4>Reset Your Password</h4> 
+									<p>Enter your email address to reset your password. You may need to check your spam folder or unblock support@skipthedishes.com</p>
 								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
+								<div class="c523"> 
+									<input type="text" name="" class="e-input" placeholder="Email">
 								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
+								<div class="c523">
+									<button class="c523-Bt">Reset password</button>
 								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
 							</div> 
-						</div> 
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
-								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
-								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
-							</div> 
-						</div>  
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
-								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
-								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
-							</div> 
-						</div> 
-					</div>
-				</div> 
-				<div class="eFilterDate_Row">
-					<div class="e-DateOrdered"><span>Wed, 20/05/2020</span> <a href="#">View Receipt</a></div>
-					<div class="e-ordered"> 
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
-								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
-								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
-							</div> 
-						</div>  
-					</div>
-				</div>
-				<div class="eFilterDate_Row">
-					<div class="e-DateOrdered"><span>Fri, 15/05/2020</span> <a href="#">View Receipt</a></div>
-					<div class="e-ordered"> 
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
-								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
-								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
-							</div> 
-						</div>  
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
-								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
-								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
-							</div> 
-						</div>  
-					</div>
-				</div>
-				<div class="eFilterDate_Row">
-					<div class="e-DateOrdered"><span>Tue, 28/04/2020</span> <a href="#">View Receipt</a></div>
-					<div class="e-ordered"> 
-						<div class="item-ordered">
-							<div class="i-item">
-								<div class="col-10 d-fl-group flex-start">
-									<div class="i-img">
-										<img src="../img/8.webp">
-									</div>
-									<div class="i-res">
-										<div class="r-title">San Francesco Foods</div>
-									</div>
-								</div>
-								<div class="col-2 other-o">
-									<a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a>
-								</div>
-							</div>
-							<div class="i-datetime d-fl-group">
-								<div class="form-group">
-									<div class="id_order">#14282020</div>
-									<div class="r-address">2020-04-28</div>  
-								</div>
-								<div class="o-feedback">
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_order_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_order_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>						
-							</div>
-							<div class="o-total d-fl-group">
-								<span>Total</span>
-								<span>$19.83</span>
-							</div> 
-						</div>  
+						</div>
 					</div>
 				</div>
 			</div>

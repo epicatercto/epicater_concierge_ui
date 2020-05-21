@@ -944,7 +944,7 @@ section.e-content {
   justify-content: center;
   align-items: flex-start;
   /* border-right: 1px solid #eee; */
-  width: calc(100% - 400px);
+  width: calc(100% - 410px);
 }
 .r-logo-business {
     display: flex;
@@ -967,12 +967,12 @@ section.e-content {
     border-radius: 6px;
 }
 .styles__RestaurantInfoDiv {
-    width: 100px;
+    width: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 25px;
+    flex-direction: row;
+    padding: 25px 0;
 }
 .r-desc.center {
     text-align: center;
@@ -1972,9 +1972,22 @@ input[type='radio'] {
 .e-orders {
   margin-top: 75px;
 }
+.eFilterDate_Row {
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 30px;
+}
+
+.e-DateOrdered {
+    display: flex;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    justify-content: space-between;
+}
 .e-ordered {
   display: flex;
-  margin-top: 50px;
   position: relative;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -2037,9 +2050,8 @@ input[type='radio'] {
 }
 
 .i-datetime i {
-  font-size: 20px;
-  color: #f93;
-  margin-right: 10px;
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 .site-header {
