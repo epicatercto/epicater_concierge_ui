@@ -77,6 +77,10 @@ $(document).ready(function(){
 	});
 	$('.datepicker').datepicker(); 
 
+	$('.setting-tab').click(function(){    
+		$('.droppdownSetting').toggleClass('open');
+	});
+
 });
 
 $(".Modern-Slider").slick({
