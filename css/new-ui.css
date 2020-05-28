@@ -1170,7 +1170,7 @@
 }
 
 .Jjs_akf {
-    width: 50%;
+    width: 110px;
 }
 
 .Jjs_akf button {
@@ -1297,4 +1297,17 @@
 }
 .changeAddr .bootstrap-select.form-control {
     width: calc(100% - 200px) !important;
+}
+.kjh {
+    width: 120px;
+}
+
+.kjh .dropdown.bootstrap-select {
+    width: 100% !important;
+}
+
+.kjh .bootstrap-select>.dropdown-toggle {
+    font-size: 12px;
+    background: transparent;
+    outline: none !important;
 }
