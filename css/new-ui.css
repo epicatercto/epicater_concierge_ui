@@ -658,10 +658,21 @@
     justify-content: space-between;
     padding: 5px 0;
     margin-bottom: 5px;
+    align-items: center;
 }
 
 .title-c1210 {
     font-weight: 500;
+    font-size: 13px;
+}
+.qty-c1210 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.price-c2821 {
+    font-size: 12px;
+    font-weight: 600;
 }
 .jskjas21 {
     padding: 13px 16px;
