@@ -18,7 +18,8 @@
 
 	<!-- Custom styles for this template-->
 	<link href="../css/bootstrap.min.css" rel="stylesheet"> 
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css"> 
+	<link href="../css/mobiscroll.jquery.min.css" rel="stylesheet">
 	<link href="../css/epicater.css" rel="stylesheet">
 	<link href="../css/new-ui.css" rel="stylesheet">
 
@@ -86,7 +87,7 @@
 							</div>
 						</div>
 						<div class="dietary_preferences">
-							 <textarea class="form-control" placeholder="Add special instructions for the restaurant"></textarea> 
+							<textarea class="form-control" placeholder="Add special instructions for the restaurant"></textarea> 
 						</div>
 						<div class="add-to-box">
 							<div class="add-to-cart">
@@ -424,7 +425,7 @@
 									</div>
 								</div> 
 							</div>
-						</fieldset> 
+						</fieldset>  
 					</div>  
 					<div class="form-group ">
 						<a href="javascript:;" class="add-a-del"><i class="fas fa-plus-circle"></i> Add new address</a>
@@ -501,19 +502,29 @@
 					</div>
 				</div> 
 			</div> 
-			<div class="e-heading mb-20 changeAddr">
-				<h3><strong>Delivery to:</strong><span><i class="fas fa-map-marker-alt"></i></span></h3>
-				<select class="form-control selectpicker" id="role" > 
-					<option value="Owner">77 Charles St WToronto, ON M5S 1K5</option>
-					<option value="Buyer">206 Bloor St W, Toronto, ON M5S 1T8</option>
-					<option value="Manager">711 Bay StToronto, ON M5G 2J8</option> 
-				</select>
+			<div class="form-group  mb-20 ">
+				<div class="e-heading changeAddr">
+					<h3><strong>Delivery to:</strong><span><i class="fas fa-map-marker-alt"></i></span></h3>
+					<select class="form-control selectpicker" id="role" > 
+						<option value="Owner">77 Charles St WToronto, ON M5S 1K5</option>
+						<option value="Buyer">206 Bloor St W, Toronto, ON M5S 1T8</option>
+						<option value="Manager">711 Bay StToronto, ON M5G 2J8</option> 
+					</select>
+				</div>
+				<div class="e-heading changeAddr">
+					<h3><strong>Type of meal:</strong><span><i class="fas fa-map-marker-alt"></i></span></h3>
+					<select class="form-control selectpicker" id="role" > 
+						<option value="Breakfast">Breakfast</option>
+						<option value="Lunch">Lunch</option>
+						<option value="Dinner">Dinner</option> 
+					</select>
+				</div>
 			</div>
 			<div class="e-heading" style="position: sticky;top: 87px;z-index: 111;margin-bottom: 20px"> 
 				<div class="pre-day-2920">
 					<div class="Pre-root">
 						<div class="Pre-subtitle1">Select Order Time</div>
-						<div class="jss2081">
+					<!-- 	<div class="jss2081 the_week">
 							<div aria-label="Mon" class="jss2082 disable">
 								<div class="jss-subday">Mon</div>
 								<div class="jss-day">11</div>
@@ -542,581 +553,367 @@
 								<div class="jss-subday">Sun</div>
 								<div class="jss-day">17</div>
 							</div>
+						</div> -->
+						<div id="demo-one-week"></div>
+						<div class="nav_control">
+							<a href="javascript:;" class="control_prev"></a>
 						</div>
 					</div>
 				</div>
-			</div> 
-			<div class="filter2904">
-				<div class="sl2904">
-					<label class="pure-material-radio">
-						<input type="radio" name="delivery_sl2904" >
-						<span>Breakfast</span> 
-					</label>
-					<label class="pure-material-radio">
-						<input type="radio" name="delivery_sl2904" checked>
-						<span>Lunch</span> 
-					</label>
-					<label class="pure-material-radio">
-						<input type="radio" name="delivery_sl2904">
-						<span>Dinner</span> 
-					</label>
-				</div>
-			</div> 
+			</div>  
 			<div class="e-container clearfix">
 				<div class="popular-products entry-content">  
-					<div class="jss1479 mb-30">
+					<div class="jss1479">
 						<h6 class="MuiTypography-h6" style="font-size: 22px">Local Restaurant Nearby</h6>
 					</div> 
-					<div class="jss1479">
-						<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/burger-king.png"></span> Burger King</h6>
-					</div> 
-					<div class="rows grid restaurant-content">    
-						<div class="grid-item">
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/10.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div> 
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+					<div class="d-fl-group three-columne">
+						<div class="grid_3">
+							<div class="meal_type">
+								<div class="meal_type_title">Breakfast</div>
+								<label class="pure-material-checkbox">
+									<input type="checkbox" name="breakfast">
+									<span>Breakfast</span>
+								</label>
+							</div>
+							<div class="restaurant_list">
+								<div class="jss1479">
+									<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/frank-honeybun.jpg"></span>Frank's Honeybun</h6>
+								</div>  
+								<div class="rows grid restaurant-content">    
+									<div class="grid-item"> 
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/12.webp"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags">
+													<div class="tag">Vegan</div> 
+													<div class="tag">Mild</div>
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_7" value="5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="4"> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="1" > <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/9.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags"> 
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_1" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/4.jpg"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags">
+													<div class="tag">Vegan</div>
+													<div class="tag">GF</div>
+													<div class="tag">Spicy</div> 
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_8" value="5" > <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_1" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_1" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="3" > <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_1" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_1" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="1" > <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/8.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags"> 
-										<div class="tag">Halal</div>
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_2" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/2.jpg"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags"> 
+													<div class="tag">Halal</div>
+													<div class="tag">Mild</div>
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_9" value="5" id="star-5" > <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_2" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="4" id="star-4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_2" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_2" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_2" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/13.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div> 
-										<div class="tag">Mild</div>
-									</div>
+									</div>  
 								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_3" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+							</div>
+						</div>
+						<div class="grid_3">
+							<div class="meal_type">
+								<div class="meal_type_title">Lunch</div>
+								<label class="pure-material-checkbox">
+									<input type="checkbox" name="Lunch">
+									<span>Lunch</span>
+								</label>
+							</div>
+							<div class="restaurant_list">
+								<div class="jss1479">
+									<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/frank-honeybun.jpg"></span>Frank's Honeybun</h6>
+								</div>  
+								<div class="rows grid restaurant-content">    
+									<div class="grid-item"> 
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/12.webp"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags">
+													<div class="tag">Vegan</div> 
+													<div class="tag">Mild</div>
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_7" value="5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_3" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="4"> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_3" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_3" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_3" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_7" value="1" > <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/4.jpg"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags">
+													<div class="tag">Vegan</div>
+													<div class="tag">GF</div>
+													<div class="tag">Spicy</div> 
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_8" value="5" > <label for="star-5"><i class="fas fa-star"></i></label>
 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/11.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div>
-										<div class="tag">Spicy</div>
-										<div class="tag">Popular</div>
-										<div class="tag">Halal</div>
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_4" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_4" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="3" > <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_4" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_4" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_4" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_8" value="1" > <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/12.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div> 
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_5" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/2.jpg"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags"> 
+													<div class="tag">Halal</div>
+													<div class="tag">Mild</div>
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_9" value="5" id="star-5" > <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_5" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="4" id="star-4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_5" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_5" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_5" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_9" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/4.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div>
-										<div class="tag">Spicy</div> 
-									</div>
+									</div>  
 								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_6" value="5" id="star-5" > <label for="star-5"><i class="fas fa-star"></i></label>
+							</div>
+						</div>
+						<div class="grid_3">
+							<div class="meal_type">
+								<div class="meal_type_title">Dinner</div>
+								<label class="pure-material-checkbox">
+									<input type="checkbox" name="Dinner">
+									<span>Dinner</span>
+								</label>
+							</div>
+							<div class="restaurant_list"> 
 
-												<input type="radio" name="rating_6" value="4" id="star-4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
+								<div class="jss1479">
+									<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/shanzee-biscuit.png"></span>Shanzee's Biscuit</h6>
+								</div> 
+								<div class="rows grid restaurant-content">    
+									<div class="grid-item"> 
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/12.webp"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags">
+													<div class="tag">Vegan</div> 
+													<div class="tag">Mild</div>
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_10" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_6" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_10" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_6" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_10" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_6" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_10" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
+
+															<input type="radio" name="rating_10" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div>  
-						</div>  
-					</div> 
-					<div class="jss1479">
-						<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/frank-honeybun.jpg"></span>Frank's Honeybun</h6>
-					</div> 
-					<div class="rows grid restaurant-content">    
-						<div class="grid-item"> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/12.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div> 
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_7" value="5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/4.jpg"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags">
+													<div class="tag">Vegan</div>
+													<div class="tag">GF</div>
+													<div class="tag">Spicy</div> 
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_11" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_7" value="4"> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_11" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_7" value="3"> <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_11" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_7" value="2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_11" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_7" value="1" > <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_11" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/4.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div>
-										<div class="tag">Spicy</div> 
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_8" value="5" > <label for="star-5"><i class="fas fa-star"></i></label>
+										<div class="item-r">
+											<div class="r-header"> 
+												<div class="r-thumbnail"> 
+													<img src="../img/2.jpg"> 
+												</div>
+											</div>
+											<div class="r-desc">
+												<div class="r-title-f">Avocado Tofu Ahimi Large</div>
+												<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
+												<div class="r-tags"> 
+													<div class="tag">Halal</div>
+													<div class="tag">Mild</div>
+												</div>
+											</div> 
+											<div class="styles__RestaurantInfoDiv">  
+												<div class="r-reviews">  
+													<div class="rating-box">
+														<div class="rating-container">
+															<input type="radio" name="rating_12" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_8" value="4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_12" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_8" value="3" > <label for="star-3"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_12" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_8" value="2"> <label for="star-2"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_12" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
 
-												<input type="radio" name="rating_8" value="1" > <label for="star-1"><i class="fas fa-star"></i></label>
+															<input type="radio" name="rating_12" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
+														</div>
+													</div> 
+												</div>
 											</div>
 										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/2.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags"> 
-										<div class="tag">Halal</div>
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_9" value="5" id="star-5" > <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_9" value="4" id="star-4" checked> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_9" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_9" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_9" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-						</div>  
-					</div> 
-					<div class="jss1479">
-						<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/shanzee-biscuit.png"></span>Shanzee's Biscuit</h6>
-					</div> 
-					<div class="rows grid restaurant-content">    
-						<div class="grid-item"> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/12.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div> 
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_10" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_10" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_10" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_10" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_10" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/4.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div>
-										<div class="tag">Spicy</div> 
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_11" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_11" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_11" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_11" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_11" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/2.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags"> 
-										<div class="tag">Halal</div>
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_12" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_12" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_12" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_12" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_12" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-						</div>  
-					</div> 
-					<div class="jss1479">
-						<h6 class="MuiTypography-root jss1553 MuiTypography-h6"><span><img src="../img/mcDonald.png"></span> McDonald's</h6>
-					</div> 
-					<div class="rows grid restaurant-content">    
-						<div class="grid-item"> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/12.webp"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div> 
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_13" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_13" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_13" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_13" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_13" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/4.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags">
-										<div class="tag">Vegan</div>
-										<div class="tag">GF</div>
-										<div class="tag">Spicy</div> 
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_14" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_14" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_14" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_14" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_14" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-							<div class="item-r">
-								<div class="r-header"> 
-									<div class="r-thumbnail"> 
-										<img src="../img/2.jpg"> 
-									</div>
-								</div>
-								<div class="r-desc">
-									<div class="r-title-f">Avocado Tofu Ahimi Large</div>
-									<div class="r-adds"><i class="fas fa-map-marker-alt"></i> 260 King St E, Toronto, ON M5A 4L5, Canada</div>
-									<div class="r-tags"> 
-										<div class="tag">Halal</div>
-										<div class="tag">Mild</div>
-									</div>
-								</div> 
-								<div class="styles__RestaurantInfoDiv">  
-									<div class="r-reviews">  
-										<div class="rating-box">
-											<div class="rating-container">
-												<input type="radio" name="rating_15" value="5" id="star-5" checked> <label for="star-5"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_15" value="4" id="star-4"> <label for="star-4"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_15" value="3" id="star-3"> <label for="star-3"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_15" value="2" id="star-2"> <label for="star-2"><i class="fas fa-star"></i></label>
-
-												<input type="radio" name="rating_15" value="1" id="star-1"> <label for="star-1"><i class="fas fa-star"></i></label>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div> 
-						</div>  
-					</div> 
+									</div>  
+								</div>  
+							</div>
+						</div>
+					</div>
 				</div> 
 			</div>
 		</div>
@@ -1162,8 +959,31 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>   
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script> 
 	<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+	<script type="text/javascript" src="../js/mobiscroll.jquery.min.js"></script>
 	<script src="../js/scripts.js"></script>  
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhzsCe8wCvZG6kuJJQQpZ0jXg2VMwVhrs&callback=initMap"
-    async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhzsCe8wCvZG6kuJJQQpZ0jXg2VMwVhrs&callback=initMap"
+	async defer></script>
+
+	<script>
+
+		window.onload = function() {
+			setTimeout(loadFrame(), 5000);
+		};
+
+		function loadFrame() {
+			$(".mbsc-cal-day-i div:nth-child(2)").css("display", "none!important"); 
+		}
+		$(function () {
+
+        // Mobiscroll Calendar initialization
+        $('#demo-one-week').mobiscroll().calendar({
+            display: 'inline',     // Specify display mode like: display: 'bottom' or omit setting to use default
+            weeks: 1               // More info about weeks: https://docs.mobiscroll.com/4-10-6/calendar#opt-weeks
+         });
+
+        
+
+     });
+  </script>
 </body>
 </html>

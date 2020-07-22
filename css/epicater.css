@@ -1058,7 +1058,7 @@ section.e-content {
   flex-direction: column;
   margin: 0px auto;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding: 15px 25px;
   background: #fff;
 }
@@ -3247,15 +3247,15 @@ button.button.btn-cart {}
 
 .MuiTypography-h6 {
     display: flex;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 28px;
     letter-spacing: 0;
     align-items: center;
 }
 .MuiTypography-h6 span img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     object-fit:contain;
     border-radius: 4px;
 }
@@ -3263,3 +3263,48 @@ button.button.btn-cart {}
 .MuiTypography-h6 span {
     margin-right: 15px;
 }
+.grid_3 {
+    width: calc(33% - 15px);
+    position: relative;
+}
+
+.meal_type {
+    display: block;
+    position: relative;
+}
+
+.meal_type_title {
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.grid_3 .item-r {
+    flex-direction: column;
+    padding: 5px 5px 15px;
+}
+
+.grid_3 .item-r .r-header {
+    width: 100%;
+}
+
+.grid_3 .item-r .r-header .r-thumbnail {
+    height: 180px;
+}
+
+.grid_3 .item-r .r-desc {
+    width: 100%;
+    padding: 10px 5px 5px;
+}
+
+.grid_3 .item-r .r-title-f {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.grid_3 .item-r .r-adds {
+    font-size: 12px;
+}
+
+.grid_3 .item-r .styles__RestaurantInfoDiv {padding: 0 5px;}
