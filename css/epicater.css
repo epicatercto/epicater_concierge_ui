@@ -3264,8 +3264,12 @@ button.button.btn-cart {}
     margin-right: 15px;
 }
 .grid_3 {
-    width: calc(33% - 15px);
+    width: calc(33% - 30px);
     position: relative;
+}
+.grid_3:after {content: "";position: absolute;width: 1px;top: 100px;bottom: 100px;right: -25px;background: #d8d8d8;}
+.grid_3:last-child:after {
+  display:none;
 }
 
 .meal_type {
@@ -3308,3 +3312,26 @@ button.button.btn-cart {}
 }
 
 .grid_3 .item-r .styles__RestaurantInfoDiv {padding: 0 5px;}
+.meal_type .dropdown.bootstrap-select {
+    width: 100% !important;
+}
+.d-fl-group.three-columne {
+    align-items: flex-start;
+}
+.empty_foods {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.empty_foods svg {
+    width: 85px;
+    fill: #929292;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.empty_foods p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+}
