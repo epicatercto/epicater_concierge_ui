@@ -3340,13 +3340,13 @@ button.button.btn-cart {}
 }
 
 .loading {
-    position: absolute;
+    position: fixed;
     background: rgba(242, 244, 245, 0.6);
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 111;
 }
 .loading-item-c {
   display: flex;
@@ -3354,6 +3354,7 @@ button.button.btn-cart {}
   justify-content: center;
   padding-top: 100px;
   flex-direction: column;
+  height: 100%;
 }
 .loader-item {
     border-radius: 50%;
