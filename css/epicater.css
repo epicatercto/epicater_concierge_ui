@@ -3335,3 +3335,47 @@ button.button.btn-cart {}
     font-weight: 500;
     color: #777;
 }
+.popular-products {
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    background: rgba(242, 244, 245, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.loading-item-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  flex-direction: column;
+}
+.loader-item {
+    border-radius: 50%;
+    position: relative;
+    animation: loader-rotate 1s linear infinite;
+    top: 0;
+    border: 2px solid #292929;
+    border-right-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+.loading-item-c span {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #565656;
+}
+@keyframes loader-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
