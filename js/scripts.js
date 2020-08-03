@@ -96,7 +96,7 @@ $(".Modern-Slider").slick({
 	draggable:false,
 	prevArrow:'<button class="PrevArrow fas fa-arrow-left"></button>',
 	nextArrow:'<button class="NextArrow fas fa-arrow-right"></button>', 
-}); 
+});  
 
 function initMap() {
 	var uluru = {lat: 43.6678574, lng: -79.3906305 }; 
