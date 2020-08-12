@@ -20,7 +20,67 @@
 	<link href="../css/all.css" rel="stylesheet">
 	<link href="../css/epicater.css" rel="stylesheet">
 	<link href="../css/new-ui.css" rel="stylesheet">
+	<style>
+		.apppt-title {
+			width: 100%;
+			margin-left: 10px;
+			font-weight: 500;
+			line-height: 40px;
+		}
+		.form-discount {
+			padding: 10px;
+		}
 
+		.form-discount label {
+			margin-bottom: 15px;
+			position: relative;
+			width: 100%;
+		}
+		.form-discount label i {
+			position: absolute;
+			right: 5px;
+			top: 3px;
+			width: 17px;
+			height: 17px;
+			background: #8BC34A;
+			border-radius: 100%;
+			font-size: 8px;
+			color: #fff;
+			/*display: none;*/
+			text-align: center;
+			line-height: 17px;
+		}
+		.d-flex-gr {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+			width: 100%;
+		}
+
+		.input-discount {
+			padding-top: 15px;
+			border-top: 1px solid #ebebeb;
+		}
+
+		.input-discount input {
+			width: 65%;
+			height: 34px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			outline: none;
+		}
+
+		.input-discount button {
+			font-weight: 500;
+			height: 34px;
+			font-size: 14px;
+			color: #f93;
+			background: #ffe5cb;
+			border-color: #ffe5cb;
+			transition: .3s;
+		}
+	</style>
 </head>
 <body>  
 	<div class="modal-j selectPayment-modal">
@@ -198,6 +258,30 @@
  								<a href="javascript:;" class="addPaymentMethod">+</a>
  							</div>
  						</div> -->
+ 						<div class="adVoucher">
+ 							<div class="pappt">
+ 								<i class="fas fa-tag"></i>
+ 								<div class="apppt-title">Discount</div> 
+ 							</div>
+ 							<div class="form-discount">
+ 								<div class="form-group">
+ 									<label class="pure-material-radio">
+ 										<input type="radio" name="discount">
+ 										<span>Discount 10% over order $100</span>
+ 										<i class="fas fa-check"></i>
+ 									</label>
+ 									<label class="pure-material-radio">
+ 										<input type="radio" name="discount">
+ 										<span>Discount 15% over order $150</span>
+ 										<i class="fas fa-check"></i>
+ 									</label>
+ 								</div>
+ 								<div class="form-group d-flex-gr input-discount">
+ 									<input type="text" name="">
+ 									<button class="btn btn-warning">Check</button>
+ 								</div>
+ 							</div>
+ 						</div>
  						<div class="adVoucher">
  							<div class="pappt">
  								<i class="fas fa-receipt"></i>
