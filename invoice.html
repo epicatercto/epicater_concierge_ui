@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Invoice</title>
+	<!-- Custom fonts for this template-->
+	<link href="../fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<link href="../css/bootstrap.min.css" rel="stylesheet"> 
+	<link href="../css/epicater.css" rel="stylesheet">
+	<link href="../css/new-ui.css" rel="stylesheet"> 
+	<style>
+		.invoice-wrapper {
+			background: #f2f2f2;
+			padding: 25px 0;
+		}
+
+		.card {
+			position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			min-width: 0;
+			word-wrap: break-word;
+			background-color: #ffffff;
+			background-clip: border-box;
+			border: 1px solid #EBEDF3;
+			border-radius: 0.42rem;
+		}
+		.card.card-custom {
+			-webkit-box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+			box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+			border: 0;
+		}
+		.overflow-hidden {
+			overflow: hidden !important;
+		} 
+		.card.card-custom > .card-body {
+			padding: 2rem 2.25rem;
+		} 
+		.invoice-heading {
+			position: relative;
+			display: block;
+		}
+
+		.justify-content-between {
+			align-items: center;
+			-webkit-box-pack: justify !important;
+			-ms-flex-pack: justify !important;
+			justify-content: space-between !important;
+			-webkit-box-orient: horizontal !important;
+			-webkit-box-direction: normal !important;
+			-ms-flex-direction: row !important;
+			flex-direction: row !important;
+			color: #535353;
+		}
+
+		.font-weight-boldest {
+			font-weight: bold;
+		}
+		.display-4 {
+			font-size: 2.5rem !important;
+		}
+
+		.mb-10 {
+			margin-bottom: 2.5rem !important;
+		}
+
+		.align-items-md-end {
+			-webkit-box-orient: vertical !important;
+			-webkit-box-direction: normal !important;
+			-ms-flex-direction: column !important;
+			flex-direction: column !important;
+			-webkit-box-align: end !important;
+			-ms-flex-align: end !important;
+			align-items: flex-end !important;
+			display: flex;
+		}
+
+		.align-items-md-end span {
+			font-size: 14px;
+			font-weight: 700;
+		}
+		.w-100 {
+			width: 100% !important;
+		}
+		.opacity-60 {
+			opacity: 0.6 !important;
+		}
+		.w-100 {
+			width: 100% !important;
+		}
+		.border-bottom {
+			border-bottom: 1px solid #EBEDF3 !important;
+		}
+		.pt-6 {
+			padding-top: 2.5rem;
+		}
+		.flex-root {
+			width: 50%;
+		}
+
+
+		.flex-column {
+			flex-direction: column;
+		}
+
+		.font-weight-bolde {
+			font-weight: 700;
+		}
+
+		.mb-2r {
+			margin-bottom: 2rem;
+		}
+		.table-responsive {
+			width: 100%;
+		}
+
+		.table-responsive th.font-weight-bold {
+			font-weight: 600;
+			font-size: 1.3rem;
+			color: #777;
+		}
+
+		.table-responsive .table>thead>tr>th {
+			border-bottom: 1px solid #eee;
+		}
+
+		tr.font-weight-boldest {
+			font-weight: 500;
+			font-size: 14px;
+		}
+
+		.button-group a {
+			display: inline-block;
+			margin-left: 10px;
+			font-size: 11px;
+			line-height: 20px;
+			padding: 0 10px;
+			border-radius: 3px;
+			border: 1px solid #000;
+			color: #000;
+		}
+		.w-50 {
+			width: 50%;
+		}
+
+		.align-right {
+			margin-left: auto;
+		}
+
+		.table-responsive.w-50 td {
+			border: 0;
+		}
+		.font-weight-bold {
+			font-weight: bold;
+		}
+		.invoice-footer {
+			position: relative;
+			margin-top: 2rem;
+		}
+		.btn-light-primary {
+			border: 1px solid #dff1ff;
+			background: #dff1ff;
+			color: #03A9F4 !important;
+			font-weight: 500;
+		}
+
+		.btn.btn-primary {
+			border: 1px solid #f93;
+			background: #fff;
+			color: #f93!important;
+			font-weight: 500;
+		}
+	</style>
+</head>
+<body>
+	<div class="invoice-wrapper">
+		<div class="container"> 
+			<div class="card card-custom overflow-hidden">
+				<div class="card-body">
+					<div class="invoice-heading">
+						<div class="d-flex justify-content-between">
+							<h1 class="font-weight-boldest mb-10">INVOICE</h1>
+							<div class="align-items-md-end px-0"> 
+								<span class="text-white">
+									<span>Order #01181</span> 
+								</span>
+							</div>
+						</div>
+						<div class="border-bottom w-100 opacity-60"></div>
+						<div class="d-flex justify-content-start pt-6">
+							<div class="d-flex flex-column flex-root">
+								<span class="font-weight-bolde mb-2r">BILLED TO:</span>
+								<span class="opacity-70">Jasson Imbery</span>
+								<span class="opacity-70">128 Lord Simeone Drive</span>
+								<span class="opacity-70">Brampton ON L6S 5G8</span>
+								<span class="opacity-70">Canada</span>
+								<span class="opacity-70">CC: XXXX-7252</span>
+								<span class="opacity-70">hoanganh@yopmail.com</span>
+							</div>
+							<div class="d-flex flex-column flex-root">
+								<span class="font-weight-bolde mb-2r">SHIPPING TO:</span> 
+								<span class="opacity-70">Jasson Imbery</span>
+								<span class="opacity-70">128 Lord Simeone Drive</span>
+								<span class="opacity-70">Brampton ON L6S 5G8</span>
+								<span class="opacity-70">Canada</span>
+								<span class="opacity-70">CC: XXXX-7252</span>
+								<span class="opacity-70">Free Delivery</span>
+							</div> 
+						</div>
+					</div>
+					<div class="invoice-body">
+						<div class="invoice-summary">
+							<h4 class="font-medium-bolde mb-2r">Order Summary</h4>
+							<div class="table-responsive ">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="font-weight-bold  text-uppercase">Item</th>
+											<th class="text-right font-weight-bold text-uppercase">Qty</th>
+											<th class="text-right font-weight-bold text-uppercase">Unit Price</th>
+											<th class="text-right font-weight-bold text-uppercase">Sub total</th>
+											<th class="action-iv"></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Creative Design</td>
+											<td class="text-right pt-7">1</td>
+											<td class="text-right pt-7">$40.00</td>
+											<td class="text-danger pr-0 pt-7 text-right">$40.00 CAD</td>
+											<td class=" pr-0 pt-7 text-right">
+												<div class="button-group">
+													<a href="#" class="cancel-iv">Cancel</a>
+													<a href="#" class="refund-iv">Refund</a>
+												</div>
+											</td>
+										</tr> 
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Creative Design</td>
+											<td class="text-right pt-7">1</td>
+											<td class="text-right pt-7">$40.00</td>
+											<td class="text-danger pr-0 pt-7 text-right">$40.00 CAD</td>
+											<td class=" pr-0 pt-7 text-right">
+												<div class="button-group">
+													<a href="#" class="cancel-iv">Cancel</a>
+													<a href="#" class="refund-iv">Refund</a>
+												</div>
+											</td>
+										</tr> 
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Creative Design</td>
+											<td class="text-right pt-7">1</td>
+											<td class="text-right pt-7">$40.00</td>
+											<td class="text-danger pr-0 pt-7 text-right">$40.00 CAD</td>
+											<td class=" pr-0 pt-7 text-right">
+												<div class="button-group">
+													<a href="#" class="cancel-iv">Cancel</a>
+													<a href="#" class="refund-iv">Refund</a>
+												</div>
+											</td>
+										</tr> 
+									</tbody>
+								</table>
+							</div>
+							<div class="border-bottom w-100 opacity-60 mb-2r"></div>
+							<div class="table-responsive w-50 align-right">
+								<table class="table"> 
+									<tbody>
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Item Subtotal</td>
+											<td class="text-right pt-7">$67.50 CAD</td> 
+										</tr>  
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Item Subtotal</td>
+											<td class="text-right pt-7">$67.50 CAD</td> 
+										</tr>  
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Item Subtotal</td>
+											<td class="text-right pt-7">$67.50 CAD</td> 
+										</tr>  
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Item Subtotal</td>
+											<td class="text-right pt-7">$67.50 CAD</td> 
+										</tr>  
+										<tr class="font-weight-boldest font-size-lg">
+											<td class="pl-0 pt-7">Item Subtotal</td>
+											<td class="text-right pt-7">$67.50 CAD</td> 
+										</tr>  
+										<tr class="font-weight-bold font-size-lg">
+											<td class="pl-0 pt-7 ">TOTAL</td>
+											<td class="text-right pt-7">$67.50 CAD</td> 
+										</tr>  
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="invoice-footer">
+						<div class="border-bottom w-100 opacity-60 mb-2r"></div>
+						<div class="d-flex justify-content-between">
+							<button type="button" class="btn btn-light-primary font-weight-bold">Cancel Order</button>
+							<button type="button" class="btn btn-primary font-weight-bold">Refund Order</button>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</body>
+	</html>

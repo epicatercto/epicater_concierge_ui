@@ -1,0 +1,93 @@
+@media screen and (max-width: 460px) {
+	.nav-site .container {
+		padding: 0 10px;
+	}
+
+	.navbar-logo a img {
+		width: 100px;
+	}
+
+	.site-navigation {
+		width: calc(100% - 100px);
+	}
+	.user-login .ul-signed li.li-signin .userName {
+		display: none;
+	}
+
+	.user-login .ul-signed li.li-signin {
+		margin: 0;
+		border: 0;
+	}
+
+	.user-login .ul-signed .meal_plan_li {
+		display: none;
+	}
+	.navbar-logo {
+		width: auto;
+	}
+
+	.droppdownSetting {
+		right: 0;
+	}
+	.user-login .ul-signed, .user-login .navbar-nav {
+		margin: 0;
+	}
+	.e-heading {
+		flex-direction: column;
+	}
+
+	.changeAddr .bootstrap-select.form-control {
+		width: 100% !important;
+		background: #f2f2f2;
+		padding: 0 10px;
+	}
+
+	.changeAddr h3 {
+		font-size: 14px;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.jss2082 {
+		width: 40px;
+		height: 40px;
+	}
+
+	.jss-subday {
+		font-size: 9px;
+	}
+
+	.jss-day {
+		font-size: 10px;
+	}
+
+	.popular-products {
+		padding: 0 10px;
+		overflow: hidden;
+	}
+
+	.grid_3 {
+		width: 100%;
+	}
+
+	.d-fl-group.three-columne {
+		flex-wrap: wrap;
+	}
+	.title-heading h1 {
+		font-size: 35px;
+	}
+
+	.e-container {
+		padding: 0 10px;
+		width: 100%;
+	}
+
+	.e-ordered {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.item-ordered {
+		width: 100%;
+	}
+}

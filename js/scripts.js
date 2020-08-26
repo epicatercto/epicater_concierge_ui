@@ -95,7 +95,31 @@ $(".Modern-Slider").slick({
 	pauseOnDotsHover:true, 
 	draggable:false,
 	prevArrow:'<button class="PrevArrow fas fa-arrow-left"></button>',
-	nextArrow:'<button class="NextArrow fas fa-arrow-right"></button>', 
+	nextArrow:'<button class="NextArrow fas fa-arrow-right"></button>',
+	responsive: [
+	{
+		breakpoint: 1024,
+		settings: {
+			slidesToShow:2,
+			slidesToScroll:1, 
+			dots: true
+		}
+	},
+	{
+		breakpoint: 600,
+		settings: {
+			slidesToShow: 2,
+			slidesToScroll: 1
+		}
+	},
+	{
+		breakpoint: 480,
+		settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		}
+	} 
+	]
 });  
 
 function initMap() {
