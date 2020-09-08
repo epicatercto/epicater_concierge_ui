@@ -230,21 +230,44 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 0px -5px 10px;
 }
 
 .tag {
-    display: inline-flex;
+    width: 26px;
+    height: 32px;
+    background: #ff9933;
+    position: relative;
+    margin: 5px 12px 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    background: #f93;
     color: #fff;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    padding: 0 10px;
-    min-width: 50px;
-    line-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tag:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 6px solid #ff9933;
+}
+.tag:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 6px solid #ff9933;
 }
 .mb-20 {
     margin-bottom: 20px;
@@ -374,7 +397,7 @@
 }
 
 .details-infor .r-tags .tag {
-    background: #a2a2a2;
+    /* background: #a2a2a2; */
 }
 .mapCheckout #map {
     height: calc(100vh - 87px);
@@ -1530,4 +1553,140 @@
     font-size: 20px;
     background: #ff9933;
     border-radius: 4px;
+}
+
+
+
+.meal_grid {
+    flex-wrap: wrap;
+}
+
+.grid-row {
+    display: block;
+    width: 100%;
+}
+.client_logo--wr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.center-wr {
+    display: inline-flex;
+    background: #ffff;
+    border-radius: 6px;
+}
+
+.center-wr img {
+    width: 200px;
+}
+.staff-vendor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+
+.staff-vendor img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.staff-vendor span {
+    font-weight: 600;
+    display: block;
+    margin-top: 5px;
+}
+.staff-vendor .picture-logo {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: 2px solid #f2f4f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.rating-point {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    background: #ff9933;
+    color: #fff;
+    height: 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.tag.Gluten-Free {
+    background: #fcc03d;
+}
+.Gluten-Free:before, .Gluten-Free:after {
+    border-left-color: #fcc03d;
+    border-right-color: #fcc03d;
+}
+.tag.Dairy-Free {
+    background: #22c0ff;
+}
+.Dairy-Free:before, .Dairy-Free:after {
+    border-left-color: #22c0ff;
+    border-right-color: #22c0ff;
+}
+.tag.Nut-Free {
+    background: #de5947;
+}
+.Nut-Free:before, .Nut-Free:after {
+    border-left-color: #de5947;
+    border-right-color: #de5947;
+}
+.tag.Vegan {
+    background: #7ed957;
+}
+.Vegan:before, .Vegan:after {
+    border-left-color: #7ed957;
+    border-right-color: #7ed957;
+}
+.tag.Halal {
+    background: #f19326;
+}
+.Halal:before, .Halal:after {
+    border-left-color: #f19326;
+    border-right-color: #f19326;
+}
+.tag.Soy-Free {
+    background: #8c52ff;
+}
+.Soy-Free:before, .Soy-Free:after {
+    border-left-color: #8c52ff;
+    border-right-color: #8c52ff;
+}
+.tag.Vegantarian {
+    background: #56b48c;
+}
+.Vegantarian:before, .Vegantarian:after {
+    border-left-color: #56b48c;
+    border-right-color: #56b48c;
+}
+.tag.Kosher {
+    background: #ffc796;
+}
+.Kosher:before, .Kosher:after {
+    border-left-color: #ffc796;
+    border-right-color: #ffc796;
+}
+.tag.Shellfish {
+    background: #78a2d2;
+    font-size: 11px;
+}
+.Shellfish:before, .Shellfish:after {
+    border-left-color: #78a2d2;
+    border-right-color: #78a2d2;
 }
