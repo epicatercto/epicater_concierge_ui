@@ -233,21 +233,44 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 0px -5px 10px;
 }
 
 .tag {
-    display: inline-flex;
+    width: 26px;
+    height: 32px;
+    background: #ff9933;
+    position: relative;
+    margin: 5px 12px 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
-    background: #f93;
     color: #fff;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    padding: 0 10px;
-    min-width: 50px;
-    line-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tag:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 6px solid #ff9933;
+}
+.tag:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 6px solid #ff9933;
 }
 .mb-20 {
     margin-bottom: 20px;
@@ -374,10 +397,6 @@
     margin-bottom: 15px;
     padding: 0 20px 15px;
     border-bottom: 1px solid #eee;
-}
-
-.details-infor .r-tags .tag {
-    background: #a2a2a2;
 }
 .mapCheckout #map {
     height: calc(100vh - 87px);
@@ -1351,8 +1370,9 @@
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   position: relative;
-  z-index: 1; }
-  .owl-carousel .owl-stage {
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
     position: relative;
     -ms-touch-action: pan-Y;
     touch-action: manipulation;
