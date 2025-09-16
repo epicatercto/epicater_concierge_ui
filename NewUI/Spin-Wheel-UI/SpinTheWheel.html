@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
+
+    <title>Spin The Wheel</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Custom styles for this template-->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media screen and (max-width:600px) {
+            .wrapper-spin-the-wheel {
+                position: relative;
+            }
+
+            .wheeling-content {
+                position: relative;
+                min-height: 100vh;
+                background-image: url(bg-spin.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: top;
+                overflow: hidden;
+            }
+
+            .logo-mb {
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            .logo-mb a {
+                display: block;
+            }
+
+            .logo-mb img {
+                height: 105px;
+            }
+
+            .title-spin {
+                display: block;
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .text-sub-title {
+                display: block;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            .mb-5 {
+                margin-bottom: 2.5rem;
+            }
+
+            .wheel-spin-box {
+                position: relative;
+                display: inline-block;
+                margin-top: -35px;
+            }
+
+            #spinwheel {
+                position: relative;
+                width: 360px;
+                margin: auto;
+            }
+
+            .wheeldotsround {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .wheeldotsround {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            #spinwheel {
+                position: relative;
+                width: 360px;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+
+            #spinwheel svg {
+                width: 100%;
+                height: 100%;
+                border: 15px solid #FEDDC2;
+                border-radius: 50%;
+                background: #FEDDC2;
+            }
+
+            .wheel-spin-box .chartholder .slice path {
+                fill: #F8A84B;
+            }
+
+            .wheel-spin-arrow {
+                position: relative;
+                text-align: center;
+                z-index: 1;
+            }
+
+            .wheel-spin-arrow svg {
+                max-width: 65px;
+            }
+
+            .btnSubmit {
+                background-color: #000;
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+                border: none;
+                padding: 14px 35px;
+                border-radius: 15px;
+            }
+
+            .wheel-spins-box {
+                width: 360px;
+                height: 360px;
+                margin: 0 auto;
+                border-radius: 50%;
+                background: #ffffff;
+                box-shadow: 0 0 0 3px #FFF, 0 0 0 14px #FEDDC2;
+                overflow: hidden;
+                margin-top: -20px;
+                position: relative;
+                transition: transform 3s ease-in-out;
+            }
+
+            .wheel-spins-box::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                left: calc(50% - 15px);
+                top: calc(50% - 15px);
+                background: #D9D9D9;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .wheel-spins-box .spin-item {
+                position: absolute;
+                width: 50%;
+                height: 50%;
+                transform-origin: bottom right;
+                transform: rotate(calc(60deg* var(--i)));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                clip-path: polygon(0 0, 40% 0, 98% 99%, 0 100%);
+                user-select: none;
+                background: #f8a84b;
+            }
+
+            .wheel-spins-box .spin-item span.no-prize {
+                position: absolute;
+                bottom: 42px;
+            }
+
+            .wheel-spins-box .spin-item span {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+                transform: rotate(-60deg);
+            }
+
+            .wheel-spins-box .spin-item span.text-black-sm {
+                position: absolute;
+                top: 97px;
+                right: 60px;
+            }
+
+            .wheel-spins-box .spin-item span.text-black-sm span {
+                display: block;
+                font-size: 11px;
+                transform: rotate(0);
+                color: #000;
+            }
+
+            .bottom-spin {
+                margin-top: -35px;
+                display: block;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+
+            .text-b3 {
+                color: #b3b3b3;
+            }
+
+            .fs-50 {
+                font-size: 50px;
+            }
+
+            .section-lunch-today {
+                position: relative;
+                padding: 100px 0;
+            }
+
+            .title-h3 {
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 50px;
+            }
+
+            .item-box-ifame {
+                position: relative;
+            }
+
+            .image-lunch {
+                display: block;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .seller-lunch {
+                position: relative;
+                padding: 0 35px;
+            }
+
+            .seller-lunch-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo-iframe {
+                width: 125px;
+            }
+
+            .information-seller {
+                width: calc(100% - 130px);
+                position: relative;
+            }
+
+            .s-name a {
+                display: block;
+                font-size: 17px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 5px;
+            }
+
+            .nutritional-facts {
+                position: relative;
+                margin: 0 -15px;
+                background: #dedede;
+                padding: 50px 35px;
+            }
+
+            .nutritional-facts .title-h3 {
+                text-align: left;
+                margin-bottom: 30px;
+                padding-bottom: 10px;
+                border-bottom: 3px solid #000;
+            }
+
+            .nutrional-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0px;
+                border-bottom: 1px dashed black;
+            }
+
+            .reviews-section {
+                position: relative;
+                padding: 100px 0;
+            }
+
+            .sub-title-h3 {
+                font-size: 16px;
+            }
+
+            .sup-title-h3 {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .text-orange-3 {
+                color: #F58220;
+            }
+
+            .rating {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                overflow: hidden;
+                flex-direction: row-reverse;
+                position: relative;
+            }
+
+            .rating-0 {
+                filter: grayscale(100%);
+            }
+
+            .rating>input {
+                display: none;
+            }
+
+            .rating>label {
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                margin-top: auto;
+                background-image: url("star.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 76%;
+                transition: .3s;
+            }
+
+            .rating>input:checked~label,
+            .rating>input:checked~label~label {
+                background-image: url("star-active.svg");
+            }
+
+
+            .rating>input:not(:checked)~label:hover,
+            .rating>input:not(:checked)~label:hover~label {
+                background-image: url("star-active.svg");
+            }
+
+            .mb-50 {
+                margin-bottom: 50px;
+            }
+
+            .form-fb {
+                width: 100%;
+                max-width: 280px;
+                padding: 15px;
+                background: #F5D5BB;
+                outline: none;
+                border-radius: 17px;
+                border: 0;
+            }
+
+            .footer-contact-us {
+                position: relative;
+                padding: 50px 35px 100px;
+                text-align: center;
+            }
+
+            .hr-top {
+                display: block;
+                height: 5px;
+                background: #F58220;
+                width: 100%;
+            }
+
+            .mt-50 {
+                margin-top: 50px;
+            }
+
+            .social-network {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .title-h2 {
+                font-size: 30px;
+                line-height: 1.2;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            .tita-flips {
+                background: #F5D5BB;
+                margin-top: 10px;
+                border-radius: 30px;
+                padding: 15px 20px 50px;
+                position: relative;
+                margin-bottom: 30px;
+            }
+
+
+            .tita-flips:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 40px;
+                display: block;
+                border-top: 6px dashed white;
+            }
+
+            .fb-modal-content {
+                padding: 0 15px;
+            }
+
+            .tita-discount {
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 15px;
+                margin-bottom: 10px;
+            }
+
+            .sale-off-price {
+                font-size: 40px;
+                font-weight: bold;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .sale-flips-txt {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .form-cs-control {
+                height: 42px;
+                width: 100%;
+                border-radius: 6px;
+                outline: none;
+                border: 0;
+                background: #FFF5ED;
+                padding: 0 15px;
+            }
+
+            .checkbox-custom {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+            }
+
+            .form-checkbox label {
+                position: relative;
+                display: inline-block;
+                line-height: 1.5em;
+                padding: 0 0 0 2em;
+                cursor: pointer;
+                text-align: left;
+                font-weight: 400;
+                font-size: 13px;
+            }
+
+            .form-checkbox label::before,
+            .form-checkbox label::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 20px;
+                height: 20px;
+            }
+
+            .form-checkbox label::before {
+                content: " ";
+                border: 2px solid #bdc3c7;
+                border-radius: 20%;
+            }
+
+            /* Checkbox */
+            .checkbox-custom+label::after {
+                content: "\2714";
+                color: #F58220;
+                line-height: 1.5;
+                text-align: center;
+            }
+
+            /* :checked */
+            .checkbox-custom:checked+label::before {
+                background: #fff;
+                border-color: #fff;
+            }
+
+            .checkbox-custom+label::after {
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                -o-transform: scale(0);
+                transform: scale(0);
+            }
+
+            .checkbox-custom:checked+label::after {
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+            }
+
+            /* Transition */
+            .form-checkbox label::before,
+            .form-checkbox label::after {
+                -webkit-transition: .25s all ease;
+                -o-transition: .25s all ease;
+                transition: .25s all ease;
+            }
+
+            .prize-code {
+                display: block;
+                margin: 20px 0;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper-spin-the-wheel">
+        <div class="wheeling-content">
+            <div class="logo-mb">
+                <a href="#">
+                    <img src="logo.png" alt="">
+                </a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 mb-5 mt-5">
+                        <h4 class="title-spin">Spin The Wheel</h4>
+                        <div class="text-sub-title">Win coupons, free meals and more!</div>
+                    </div>
+                    <div class="col col-xs-12 text-center mb-4">
+                        <div id="spin-arrow" class="wheel-spin-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="45" viewBox="0 0 42 45"
+                                fill="none">
+                                <path d="M38.9299 2H3.15619L22.0652 41.1275L38.9299 2Z" fill="#F5D5BB" stroke="white"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                        <div class="wheel-spins-box">
+                            <div class="spin-item" style="--i:1;">
+                                <span class="no-prize">No Prize</span>
+                            </div>
+                            <div class="spin-item" style="--i:2;">
+                                <span class="text-black-sm">10% off <span>At Raahi</span></span>
+                            </div>
+                            <div class="spin-item" style="--i:3;">
+                                <span class="no-prize">No Prize</span>
+                            </div>
+                            <div class="spin-item" style="--i:4;">
+                                <span class="text-black-sm">10% off <span>Crystal Thani</span></span>
+                            </div>
+                            <div class="spin-item" style="--i:5;">
+                                <span class="no-prize">No Prize</span>
+                            </div>
+                            <div class="spin-item" style="--i:6;">
+                                <span class="text-black-sm">10% off <span>Shawarma<br>Moose</span></span>
+                            </div>
+                        </div>
+                        <div class="bottom-spin">
+                            <img src="bottom-spin.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col col-xs-12 text-center mb-5">
+                        <button id="spin" class="spin-click-button btnSubmit" style="background: #E5A000;">Spin
+                            Now</button>
+                    </div>
+
+                    <div class="col col-xs-12 text-center ">
+                        <p>Scroll down to learn<br> about your lunch</p>
+                        <a href="#" class="text-b3">
+                            <i class="fal fa-angle-down fs-50"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="section-lunch-today">
+                    <div class="title-h3">Whats in your lunch today?</div>
+                    <div class="item-box-ifame">
+                        <div class="image-lunch">
+                            <img src="food-graphic.png" alt="">
+                        </div>
+                        <div class="seller-lunch">
+                            <div class="seller-lunch-info">
+                                <div class="logo-iframe">
+                                    <img src="seller-logo.png" alt="">
+                                </div>
+                                <div class="information-seller">
+                                    <div class="s-name"><a href="#">Rokito</a></div>
+                                    <div class="s-addr">
+                                        420 Queen St W,<br>Toronto, ON M5V 2A7
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-lunch-item" style="text-align: center;">
+                                <p>Menu Item:</p>
+                                <p class="mb-4"><strong>Premium Combination Box</strong></p>
+                                <p>
+                                    Includes:
+                                    Jasmine Rice, E-fu Noodles, Ginger Green Onion Chicken, Tomato Shrimp, Basa
+                                    Filet Mixed Vegetables . Also includes Pork Dumplings and accompanied by Butter
+                                    Mochi as a dessert.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nutritional-facts">
+                    <div class="title-h3">Nutritional Facts</div>
+                    <ul>
+                        <li>
+                            <div class="nutrional-item">
+                                <span>Fat</span>
+                                <span>1%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nutrional-item">
+                                <span>Fiber</span>
+                                <span>7%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nutrional-item">
+                                <span>Protein</span>
+                                <span>30%</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="nutrional-item">
+                                <span>Vitamin</span>
+                                <span>15%</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <div class="nutrional-item">
+                            <span>Canxi</span>
+                            <span>1%</span>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviews-section">
+                    <div class="title-h3">
+                        How was your meal?
+                        <div class="sup-title-h3 text-orange-3"> Write a review for a coupon</div>
+                    </div>
+                    <div class="feedback">
+                        <div class="rating mb-50">
+                            <input type="radio" name="rating" id="rating-5">
+                            <label for="rating-5"></label>
+                            <input type="radio" name="rating" id="rating-4">
+                            <label for="rating-4"></label>
+                            <input type="radio" name="rating" id="rating-3">
+                            <label for="rating-3"></label>
+                            <input type="radio" name="rating" id="rating-2">
+                            <label for="rating-2"></label>
+                            <input type="radio" name="rating" id="rating-1">
+                            <label for="rating-1"></label>
+                        </div>
+                        <div class="feedback-form mb-50" style="text-align: center;">
+                            <p>Leave us your feedback here:</p>
+                            <textarea name="message" rows="4" id="" class="form-fb" sty></textarea>
+                        </div>
+                        <div class="col col-xs-12 text-center">
+                            <button id="spin" class="btnSubmit" data-toggle="modal" data-target="#modalFeedback"><i
+                                    class="fal fa-star"></i> Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact-us">
+                    <div class="hr-top"></div>
+                    <div class="title-h3 mt-50 mb-50">Contact Us!</div>
+                    <div class="mb-50">info@epicater.ca</div>
+                    <div class="social-network">
+                        <a href="">
+                            <img src="Instagram.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="tiktok.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalWinner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: 0;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="fb-modal-content text-center">
+                        <div class="title-h2 mt-50" style="color: #F68B35">You’re a Winner!</div>
+                        <img src="winner.png" alt="">
+                        <div class="prize-code">
+                            <span>*PRIZE HERE*</span>
+                        </div>
+                        <div class="form-group">
+                            <p class="mb-4">Submit your email to claim your prize!</p>
+                            <input type="text" class="form-cs-control" placeholder="Email">
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" name="cb2" class="checkbox-custom" id="cb2">
+                            <label for="cb2">I agree to receive promotional emails, updates, special offers, news and
+                                other communications related to Epicater</label>
+                        </div>
+                        <div class="mt-50 form-group mb-50">
+                            <button class="btnSubmit" style="background: #E5A000;">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalLoser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: 0;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="fb-modal-content text-center">
+                        <div class="title-h2 mt-50" style="color: #F68B35">Play Again <br>
+                            Next Time!</div>
+                        <div class="form-group">
+                            <p class="mb-4">Stay Updated!</p>
+                            <input type="text" class="form-cs-control" placeholder="Email">
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" name="cb2" class="checkbox-custom" id="cb2">
+                            <label for="cb2">I agree to receive promotional emails, updates, special offers, news and
+                                other communications related to Epicater</label>
+                        </div>
+                        <div class="mt-50 form-group mb-50">
+                            <button class="btnSubmit" style="background: #E5A000;">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalFeedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="border: 0;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="fb-modal-content text-center">
+                        <img src="feedback.png" alt="">
+                        <div class="title-h2 mt-50">Thank you for your<br> feedback!</div>
+                        <div class="sub-title-h3" style="color: #F68B35;font-weight: 600;">
+                            Enjoy this coupon!
+                        </div>
+                        <div class="tita-flips">
+                            <div class="tita-discount">
+                                <div class="sale-off-price">30%</div>
+                                <div class="sale-flips-txt">Tita Flips</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-cs-control" placeholder="Email">
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" name="cb" class="checkbox-custom" id="cb">
+                            <label for="cb">I agree to receive promotional emails, updates, special offers, news and
+                                other communications related to Epicater</label>
+                        </div>
+                        <div class="mt-50 form-group mb-50">
+                            <button class="btnSubmit" style="background: #E5A000;">Claim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        let wheel = document.querySelector('.wheel-spins-box');
+        let spinBtn = document.querySelector('.spin-click-button');
+        let value = Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function () {
+            wheel.style.transform = "rotate(" + value + "deg)";
+            value += Math.ceil(Math.random() * 3600);
+
+        } 
+    </script>
+</body>
+
+</html>
