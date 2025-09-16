@@ -3,6 +3,10 @@
     --bs-secondary: #e5e7eb;
     --bs-blue: #2196F3;
     --spacing: 0.25rem;
+    --border: #8a8a8a;
+    --fff: #fff;
+    --text: #222;
+    --disabled: #cfcfcf;
 }
 
 body {
@@ -72,8 +76,8 @@ body {
 
 .search-icon {
     position: absolute;
-    left: .5rem;
-    top: .5rem;
+    right: 16px;
+    top: 20px;
     opacity: .6
 }
 
@@ -135,7 +139,7 @@ body {
     color: #111827;
 }
 
-.custom-tabs .nav-link.active {
+.custom-tabs .nav-item.active .nav-link {
     background-color: white;
     border: 1px solid #e5e7eb;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -384,12 +388,6 @@ body {
         flex-direction: row !important;
     }
 }
-.search-icon {
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    opacity: .6;
-}
 .search-input {
     padding-left: 2rem;
 }
@@ -502,4 +500,99 @@ body {
 }
 .p-2 {
     padding: 8px;
+}
+
+/* Layout */
+.chk{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text);
+  line-height: 1;
+}
+
+/* Hide native checkbox but keep it accessible */
+.chk input[type="checkbox"]{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Visual box */
+.chk-box{
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  background: #fff;
+  display: inline-grid;
+  place-items: center;
+  transition: background .15s ease, border-color .15s ease, transform .08s ease;
+  box-sizing: border-box;
+}
+
+/* Animated checkmark using pseudo-element */
+.chk-box::after{
+  content: "";
+  width: 8px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 0 3px 3px; /* draw check shape */
+  transform: rotate(-45deg) scale(0);
+  transform-origin: center;
+  transition: transform .12s cubic-bezier(.2,.8,.2,1);
+  display: block;
+  box-sizing: border-box;
+}
+
+/* When checked — target via sibling selector (input then .chk-box) */
+.chk input[type="checkbox"]:checked + .chk-box{
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.chk input[type="checkbox"]:checked + .chk-box::after{
+  transform: rotate(-45deg) scale(1);
+}
+
+/* Hover/active affordance */
+.chk:hover .chk-box { transform: translateY(-1px); }
+
+/* Keyboard focus (visible) */
+.chk input[type="checkbox"]:focus + .chk-box{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(138, 81, 43, 0.18);
+  border-color: var(--bs-primary);
+}
+
+/* Label text styling */
+.chk-label{
+  font-size: 14px;
+  /* allow the text to wrap if container is narrow */
+  word-break: break-word;
+  font-weight: 500;
+}
+
+/* Disabled state support */
+.chk input[type="checkbox"]:disabled + .chk-box{
+  background: #f5f5f5;
+  border-color: var(--disabled);
+  cursor: not-allowed;
+}
+.chk input[type="checkbox"]:disabled ~ .chk-label{
+  color: var(--disabled);
+  cursor: not-allowed;
+}
+.site-navigation .navbar-nav>li.li-signin a {
+    display: flex;
+    align-items: center;
+    color: #222;
+    background: #fff;
 }

@@ -557,13 +557,21 @@
 		</header>
 		<div class="container-xl py-4 py-md-5" style="margin-top: 87px;">
 			<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
-				<div>
+				<div class="w-100">
 					<h1 class="h3 fw-bold mb-1">Company Meal Portal</h1>
 					<p class="text-muted small mb-0">Plan meals on the calendar and order from curated vendors selected
 						for you.</p>
+					<div class="e-heading changeAddr full-width " style="max-width: 100%;margin-bottom: 0;margin-top: 16px;">
+						<h3><strong>Delivery to:</strong><span><i class="fas fa-map-marker-alt"></i></span></h3>
+						<select class="form-control selectpicker" id="role">
+							<option value="Owner">77 Charles St WToronto, ON M5S 1K5</option>
+							<option value="Buyer">206 Bloor St W, Toronto, ON M5S 1T8</option>
+							<option value="Manager">711 Bay StToronto, ON M5G 2J8</option>
+						</select>
+					</div>
 				</div>
 			</div>
-			<div class="row g-4">
+			<div class="row g-4 pt-3">
 				<!-- Calendar -->
 				<div class="col-lg-4">
 					<div class="card">
@@ -609,30 +617,43 @@
 									<div class="text-muted small">Daily picks rotate and are tailored to your saved
 										preferences.</div>
 								</div>
-								<div class="position-relative" style="width: 280px; max-width: 100%;">
-									<i class="bi bi-search search-icon"></i>
+
+								<label class="chk" for="diet-indicators">
+									<input id="diet-indicators" type="checkbox" />
+									<span class="chk-box" aria-hidden="true"></span>
+									<span class="chk-label">Apply My Dietary Indicators</span>
+								</label>
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center rounded"
+								style="background: #f0f5fa">
+								<ul class="nav custom-tabs" id="vendorTabs" role="tablist">
+									<li class="nav-item active" role="presentation">
+										<button class="nav-link active" id="tab-breakfast" data-toggle="tab"
+											data-target="#pane-breakfast" type="button" role="tab"
+											aria-selected="true">Breakfast</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="tab-lunch" data-toggle="tab"
+											data-target="#pane-lunch" type="button" role="tab" aria-selected="false"
+											tabindex="-1">Lunch</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="tab-dinner" data-toggle="tab"
+											data-target="#pane-dinner" type="button" role="tab" aria-selected="false"
+											tabindex="-1">Dinner</button>
+									</li>
+								</ul>
+
+								<div class="position-relative" style="width: 280px; max-width: 100%;padding:6px">
 									<input id="searchInput" class="form-control h-10 form-control-sm search-input"
 										placeholder="Search vendors or dishes">
 								</div>
 							</div>
 
-							<ul class="nav custom-tabs" id="vendorTabs" role="tablist">
-								<li class="nav-item" role="presentation">
-									<button class="nav-link active" id="tab-recommended" data-toggle="tab"
-										data-target="#pane-recommended" type="button" role="tab"
-										aria-selected="true">Recommended for
-										You</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" id="tab-all" data-toggle="tab" data-target="#pane-all"
-										type="button" role="tab" aria-selected="false" tabindex="-1">All
-										Vendors</button>
-								</li>
-							</ul>
-
 							<div class="tab-content pt-3">
-								<div class="tab-pane active" id="pane-recommended" role="tabpanel"
-									aria-labelledby="tab-recommended">
+								<div class="tab-pane active" id="pane-breakfast" role="tabpanel"
+									aria-labelledby="tab-breakfast">
 									<div id="recommendedList" class="row g-3">
 										<div class="col-12 col-md-6">
 											<div class="card h-100">
@@ -815,7 +836,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tab-pane " id="pane-all" role="tabpanel" aria-labelledby="tab-all">
+								<div class="tab-pane " id="pane-lunch" role="tabpanel" aria-labelledby="tab-lunch">
 									<div id="allList" class="row g-3">
 										<div class="col-12 col-md-6">
 											<div class="card h-100">
@@ -1103,6 +1124,189 @@
 																<div class="fw-medium small item-name">Lamb Rogan Josh
 																</div>
 																<div class="text-muted small item-price">15,90&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags">
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" id="pane-dinner" role="tabpanel" aria-labelledby="tab-dinner">
+									<div id="recommendedList" class="row g-3">
+										<div class="col-12 col-md-6">
+											<div class="card h-100">
+												<div class="card-body">
+													<div class="d-flex justify-content-between align-items-start mb-2">
+														<div>
+															<h6 class="mb-0 vendor-name">Sushi Avenue</h6>
+															<div class="text-muted small vendor-cuisine">Japanese</div>
+														</div>
+														<div class="rating small"><i class="fas fa-star"></i> <span
+																class="vendor-rating">4.8</span></div>
+													</div>
+													<div class="d-grid gap-2 menu-items">
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Spicy Salmon Roll
+																</div>
+																<div class="text-muted small item-price">9,50&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags">
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Dragon Roll</div>
+																<div class="text-muted small item-price">13,50&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags">
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Veggie Roll Set
+																</div>
+																<div class="text-muted small item-price">11,00&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags"><span
+																		class="badge rounded-pill bg-light text-dark border badge-tag">vegan</span>
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-12 col-md-6">
+											<div class="card h-100">
+												<div class="card-body">
+													<div class="d-flex justify-content-between align-items-start mb-2">
+														<div>
+															<h6 class="mb-0 vendor-name">Pasta &amp; Co.</h6>
+															<div class="text-muted small vendor-cuisine">Italian</div>
+														</div>
+														<div class="rating small"><i class="fas fa-star"></i> <span
+																class="vendor-rating">4.5</span></div>
+													</div>
+													<div class="d-grid gap-2 menu-items">
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Chicken Alfredo
+																</div>
+																<div class="text-muted small item-price">14,00&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags">
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Pesto Penne (V)
+																</div>
+																<div class="text-muted small item-price">13,25&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags"><span
+																		class="badge rounded-pill bg-light text-dark border badge-tag">vegetarian</span>
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Beef Lasagna
+																</div>
+																<div class="text-muted small item-price">15,25&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags">
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-12 col-md-6">
+											<div class="card h-100">
+												<div class="card-body">
+													<div class="d-flex justify-content-between align-items-start mb-2">
+														<div>
+															<h6 class="mb-0 vendor-name">Green Bowl Kitchen</h6>
+															<div class="text-muted small vendor-cuisine">Healthy • Bowls
+															</div>
+														</div>
+														<div class="rating small"><i class="fas fa-star"></i> <span
+																class="vendor-rating">4.7</span></div>
+													</div>
+													<div class="d-grid gap-2 menu-items">
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Teriyaki Salmon
+																	Bowl
+																</div>
+																<div class="text-muted small item-price">15,50&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags"><span
+																		class="badge rounded-pill bg-light text-dark border badge-tag">gluten-free</span>
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Tofu Power Bowl
+																</div>
+																<div class="text-muted small item-price">12,00&nbsp;US$
+																</div>
+																<div class="mt-1 d-flex flex-wrap gap-1 item-tags"><span
+																		class="badge rounded-pill bg-light text-dark border badge-tag">vegan</span>
+																</div>
+															</div>
+															<button
+																class="btn btn-sm btn-bs-primary text-xs font-medium add-btn">Add</button>
+														</div>
+
+														<div
+															class="d-flex justify-content-between align-items-center gap-2 border rounded p-2">
+															<div>
+																<div class="fw-medium small item-name">Chicken Caesar
+																	Wrap
+																</div>
+																<div class="text-muted small item-price">11,00&nbsp;US$
 																</div>
 																<div class="mt-1 d-flex flex-wrap gap-1 item-tags">
 																</div>
